@@ -619,7 +619,7 @@ function pageEl(idx, side) {
 /* ---------- book state ---------- */
 const stage = $('#stage'), book = $('#book'), slotL = $('#slotL'), slotR = $('#slotR');
 let mode = '', cur = 0, pw = 400, turn = null, pendingFlash = null, suppressClick = false;
-let focus = null;                          // the page, combination or color the reader asked for; drives the label and the link
+let focus = null, lastFlash = null;                          // the page, combination or color the reader asked for; drives the label and the link
 let bookX = 0, nudge = 0, nudgeSpring = null;
 const spreadOf = p => Math.floor((p + 1) / 2);
 const spreadPages = s => [2 * s - 1, 2 * s];
@@ -630,6 +630,7 @@ const applyBook = () => { book.style.transform = `translateX(${(bookX + nudge).t
 
 function fill(slot, idx, side) { slot.replaceChildren(); const el = pageEl(idx, side); if (el) slot.appendChild(el); }
 function render() {
+  if (!pendingFlash && lastFlash && performance.now() - lastFlash.t < 1200) pendingFlash = lastFlash.sel;
   if (mode === 'spread') { const s = spreadOf(cur), [l, r] = spreadPages(s); fill(slotL, l, 'left'); fill(slotR, r, 'right'); bookX = shiftOf(s); }
   else { slotL.replaceChildren(); fill(slotR, cur, 'single'); bookX = 0; }
   applyBook(); afterMove();
@@ -852,7 +853,7 @@ function afterMove() {
   try { localStorage.setItem('adcc-anchor', JSON.stringify(a)); } catch (e) {}
   if (pendingFlash) {
     const el = book.querySelector('.slot ' + pendingFlash);
-    if (el) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+    if (el) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); lastFlash = {sel: pendingFlash, t: performance.now()}; }
     pendingFlash = null;
   }
 }
@@ -1101,14 +1102,28 @@ function layout(force) {
 }
 
 /* ---------- start ---------- */
+function parseHash(h) {
+  if (/^c\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= 348) return {combo: +h.slice(1)};
+  if (/^k\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= C.length) return {color: +h.slice(1) - 1};
+  if (/^p\d+$/.test(h)) return {page: +h.slice(1)};
+  if (h === 'index') return {key: 'idivider'};
+  if (/^[a-z]+[IV]*\d*$/.test(h)) return {key: h};
+  return null;
+}
+addEventListener('hashchange', () => {          // a link or an edited address moves the book
+  const a = parseHash(location.hash.slice(1));
+  if (!a) return;
+  if (a.combo) gotoCombo(a.combo);
+  else if (a.color != null) gotoColor(a.color);
+  else goTo(a.page != null ? a.page : pageOf(a));
+});
 (function start() {
-  const h = (location.hash || '').slice(1);
-  if (/^c\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= 348) { pendingAnchor = {combo: +h.slice(1)}; pendingFlash = `[data-n="${+h.slice(1)}"]`; }
-  else if (/^k\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= C.length) { pendingAnchor = {color: +h.slice(1) - 1}; pendingFlash = `[data-row="${+h.slice(1) - 1}"]`; }
-  else if (/^p\d+$/.test(h)) pendingAnchor = {page: +h.slice(1)};
-  else if (h === 'index') pendingAnchor = {key: 'idivider'};
-  else if (/^[a-z]+[IV]*$/.test(h)) pendingAnchor = {key: h};
-  else { try { const s = JSON.parse(localStorage.getItem('adcc-anchor') || 'null'); if (s && typeof s === 'object') pendingAnchor = s; } catch (e) {} }
+  const a = parseHash((location.hash || '').slice(1));
+  if (a) {
+    pendingAnchor = a;
+    if (a.combo) pendingFlash = `[data-n="${a.combo}"]`;
+    if (a.color != null) pendingFlash = `[data-row="${a.color}"]`;
+  } else { try { const s = JSON.parse(localStorage.getItem('adcc-anchor') || 'null'); if (s && typeof s === 'object') pendingAnchor = s; } catch (e) {} }
   if (!pendingAnchor) pendingAnchor = {key: 'cover'};
   layout(true);
   const dock = $('#dock');
