@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Dictionary of Color Combinations</title>
+<meta name="description" content="A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.">
+<meta name="theme-color" content="#e8e7e3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://subhranilmaity06.github.io/dictionary-of-color-combinations/">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Color Dictionary">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A Dictionary of Color Combinations">
+<meta property="og:description" content="A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.">
+<meta property="og:url" content="https://subhranilmaity06.github.io/dictionary-of-color-combinations/">
+<meta property="og:image" content="https://subhranilmaity06.github.io/dictionary-of-color-combinations/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Dictionary of Color Combinations, with seven sample combinations">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/shippori-mincho-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/zen-kaku-gothic-new-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/shippori-mincho-400.woff2) format("woff2")}
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/shippori-mincho-500.woff2) format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/zen-kaku-gothic-new-400.woff2) format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/zen-kaku-gothic-new-500.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-400.woff2) format("woff2")}
+/* Layout: a single open book on a quiet ground (ma). Asymmetric page margins carry vertical running heads (fukinsei);
+   ink, paper and one vermilion seal are the whole palette (kanso). One translucent capsule holds every control.
+   Pages re-flow to the reader's screen: two-page spread on wide screens, one tall page on phones and portrait tablets. */
+:root{
+  --ground:#e8e7e3;
+  --paper:#f6f5f1;
+  --sumi:#1b1b1d;
+  --usuzumi:#6c6c72;
+  --hairline:rgba(27,27,29,.16);
+  --shu:#c2402c;
+  --gutter:rgba(60,50,40,.10);
+  --cloth:#1c1c1f;
+  --cloth-ink:#ece8de;
+  --glass:rgba(250,250,247,.74);
+  --glass-line:rgba(27,27,29,.09);
+  --glass-ink:#1b1b1d;
+  --glass-muted:#6c6c72;
+  --sheet:#fbfaf8;
+  --tint:#1b1b1d;
+  --on-tint:#f6f5f1;
+  --scrim:rgba(18,18,20,.26);
+  --page-shadow:0 1px 2px rgba(0,0,0,.06),0 20px 38px -26px rgba(0,0,0,.5);
+  --font-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,"Times New Roman",serif;
+  --font-body:"Zen Kaku Gothic New","Hiragino Sans","Helvetica Neue",Arial,sans-serif;
+  --font-data:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#111113; --paper:#ecebe6; --cloth:#202024; --gutter:rgba(40,32,24,.16);
+    --glass:rgba(32,32,36,.74); --glass-line:rgba(255,255,255,.09); --glass-ink:#ececef; --glass-muted:#9d9da6;
+    --sheet:#1c1c20; --tint:#ececef; --on-tint:#111113; --scrim:rgba(0,0,0,.5);
+    --page-shadow:0 1px 2px rgba(0,0,0,.5),0 26px 50px -24px rgba(0,0,0,.9);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111113; --paper:#ecebe6; --cloth:#202024; --gutter:rgba(40,32,24,.16);
+  --glass:rgba(32,32,36,.74); --glass-line:rgba(255,255,255,.09); --glass-ink:#ececef; --glass-muted:#9d9da6;
+  --sheet:#1c1c20; --tint:#ececef; --on-tint:#111113; --scrim:rgba(0,0,0,.5);
+  --page-shadow:0 1px 2px rgba(0,0,0,.5),0 26px 50px -24px rgba(0,0,0,.9);
+  color-scheme:dark;
+}
+@media (prefers-reduced-transparency: reduce){ :root{ --glass:var(--sheet) } }
+
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--glass-ink);font-family:var(--font-body);overflow:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+.app{height:100%;display:flex;flex-direction:column;padding-inline:16px;box-sizing:border-box}
+button{font:inherit;color:inherit;touch-action:manipulation}
+:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- stage & book ---------- */
+.stage{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.book{position:relative;width:calc(var(--pw,400px) * 2);height:var(--ph,590px);will-change:transform}
+.book.single{width:var(--pw,400px)}
+.slot{position:absolute;top:0;width:var(--pw,400px);height:100%}
+.slot.left{left:0}
+.slot.right{left:var(--pw,400px)}
+.book.single .slot.right{left:0}
+.book.single .slot.left{display:none}
+.slot.measure{left:0;visibility:hidden;pointer-events:none;z-index:-1}
+.slot.measure .pb{overflow:hidden!important}
+.leaf{position:absolute;top:0;width:var(--pw,400px);height:100%;transform-style:preserve-3d;z-index:5;pointer-events:none;will-change:transform}
+.leaf.fwd{left:var(--pw,400px);transform-origin:left center}
+.leaf.bwd{left:0;transform-origin:right center}
+.leaf.solo{left:0;transform-origin:left center}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.b{transform:rotateY(180deg)}
+.face.blank{background:var(--paper)}
+.shade{position:absolute;inset:0;opacity:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.32),rgba(0,0,0,.04))}
+.face.b .shade{background:linear-gradient(to left,rgba(0,0,0,.32),rgba(0,0,0,.04))}
+.edge{position:absolute;top:0;height:100%;width:6%;border:0;padding:0;background:transparent;cursor:pointer;z-index:4;opacity:0;transition:opacity .25s}
+.edge:hover,.edge:focus-visible{opacity:1}
+.edge.prev{left:0;background:linear-gradient(to right,rgba(0,0,0,.08),transparent)}
+.edge.next{right:0;background:linear-gradient(to left,rgba(0,0,0,.08),transparent)}
+
+/* ---------- paper ---------- */
+.page{position:absolute;inset:0;box-sizing:border-box;background-color:var(--paper);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4 0 0 0 0 .34 0 0 0 0 .26 .05 0 0 0 0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");color:var(--sumi);font-family:var(--font-body);font-size:var(--fs,14px);line-height:1.45;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--page-shadow)}
+.page.left{padding:2.6em 2.2em 3.2em 3.6em}
+.page.right{padding:2.6em 3.6em 3.2em 2.2em}
+.page.single{padding:2.4em 2.9em 3em 1.8em}
+.page::after{content:"";position:absolute;top:0;bottom:0;width:12%;pointer-events:none}
+.page.left::after{right:0;background:linear-gradient(to right,transparent,var(--gutter))}
+.page.right::after{left:0;background:linear-gradient(to left,transparent,var(--gutter))}
+.slot.left .page{box-shadow:var(--page-shadow),-2px 0 0 #e3e1da,-3px 0 0 #d3d0c8}
+.slot.right .page{box-shadow:var(--page-shadow),2px 0 0 #e3e1da,3px 0 0 #d3d0c8}
+.slot .page.page--cover,.slot .page.page--back{box-shadow:var(--page-shadow),0 0 0 1px rgba(255,255,255,.05)}
+
+.rhw{position:absolute;top:2.6em}
+.page.left .rhw{left:1.35em}
+.page.right .rhw{right:1.35em}
+.page.single .rhw{right:1.2em;top:2.4em}
+.rh{writing-mode:vertical-rl;font-size:.52em;letter-spacing:.34em;text-transform:uppercase;color:var(--usuzumi);white-space:nowrap}
+.fo{position:absolute;bottom:1.5em;font-family:var(--font-display);font-size:.7em;color:var(--usuzumi);font-variant-numeric:tabular-nums}
+.page.left .fo{left:calc(3.6em / .7)}
+.page.right .fo{right:calc(3.6em / .7)}
+.page.single .fo{right:calc(2.9em / .7)}
+.pb{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:2.6em}
+.page--contents .pb,.page--index .pb,.pb.prose{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+.pb::-webkit-scrollbar{display:none}
+
+/* combinations: each takes an equal share of the page; swatches grow to fill it, within limits */
+.page--combo .pb{gap:2.2em}
+.combo{flex:1 1 0;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:.85em}
+.combo__head,.labs{flex:none}
+.combo__head{display:flex;align-items:baseline;justify-content:space-between;gap:1em}
+.combo__no{font-family:var(--font-display);font-weight:500;font-size:1.2em;letter-spacing:.06em;font-variant-numeric:tabular-nums;line-height:1}
+.copy{all:unset;box-sizing:border-box;cursor:pointer;font-size:.54em;letter-spacing:.2em;text-transform:uppercase;color:var(--usuzumi);padding:.7em 0 .7em .8em;display:inline-flex;align-items:center;gap:.7em}
+.copy::before{content:"";width:1.4em;height:1px;background:currentColor;opacity:.6}
+.copy:hover{color:var(--sumi)}
+.copy:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.sws{display:grid;grid-template-columns:repeat(var(--n),1fr);flex:1 1 auto;min-height:4.5em;max-height:var(--swh,10em)}
+.combo--2 .sws{--swh:11em}
+.combo--3 .sws{--swh:9.5em}
+.combo--4 .sws{--swh:24em}
+.sw{all:unset;box-sizing:border-box;display:block;cursor:pointer;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);position:relative;transition:transform .12s ease-out}
+.sw:active{transform:scale(.985)}
+.sw:focus-visible{outline:2px solid var(--shu);outline-offset:2px;z-index:2}
+.labs{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:.9em}
+.lab{min-width:0}
+.lab__name{display:block;font-size:.72em;font-weight:500;line-height:1.3}
+.lab__cmyk{display:block;font-family:var(--font-data);font-size:.56em;color:var(--usuzumi);margin-top:.45em;letter-spacing:.02em}
+.var{font-style:normal;font-family:var(--font-data);font-size:.8em;color:var(--usuzumi);margin-left:.35em}
+.combo.flash .sws,.irow.flash{animation:flash 1.8s ease-out}
+@keyframes flash{0%,35%{box-shadow:0 0 0 .55em var(--paper),0 0 0 .62em var(--shu)}100%{box-shadow:0 0 0 .55em transparent,0 0 0 .62em transparent}}
+
+/* index */
+.ihead{display:flex;align-items:baseline;justify-content:space-between;gap:1em;padding-bottom:.7em;border-bottom:1px solid var(--hairline);flex:none}
+.ihead h2{margin:0;font-family:var(--font-display);font-weight:500;font-size:1.2em;line-height:1.2;text-wrap:balance}
+.ihead span{font-family:var(--font-data);font-size:.56em;color:var(--usuzumi);white-space:nowrap}
+.page--index .pb{justify-content:flex-start;gap:1.15em}
+.irow{display:grid;grid-template-columns:3.6em 1fr;gap:1.1em;align-items:start;border-radius:.1em;flex:none}
+.irow .sw{height:3em}
+.irow__name{font-family:var(--font-display);font-weight:500;font-size:.88em;line-height:1.2}
+.irow__meta{font-family:var(--font-data);font-size:.56em;color:var(--usuzumi);margin-top:.4em;letter-spacing:.02em}
+.nums{display:flex;flex-wrap:wrap;gap:.2em .55em;margin-top:.45em}
+.num{all:unset;box-sizing:border-box;cursor:pointer;font-family:var(--font-data);font-size:.6em;line-height:1;padding:.45em .1em;color:var(--sumi);border-bottom:1px solid transparent;font-variant-numeric:tabular-nums}
+.num:hover{border-bottom-color:var(--sumi)}
+.num:focus-visible{outline:2px solid var(--shu);outline-offset:1px}
+
+/* cover & back: blind-stamped frame, quiet hierarchy, a signature seal */
+.page--cover,.page--back{background-color:var(--cloth);color:var(--cloth-ink);background-image:radial-gradient(ellipse 90% 70% at 28% 18%,rgba(255,255,255,.055),transparent 62%),repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 3px);padding:3.4em 3em 3em 3.4em}
+.page--cover::before,.page--back::before{content:"";position:absolute;inset:1.15em;border:1px solid rgba(255,255,255,.075);box-shadow:0 1px 0 rgba(0,0,0,.25),inset 0 1px 0 rgba(0,0,0,.25);pointer-events:none}
+.page--cover::after,.page--back::after{width:5%}
+.seal{display:inline-block;flex:none;width:1em;height:1em;background:var(--shu);border-radius:.08em;box-shadow:inset 0 0 0 .09em var(--shu),inset 0 0 0 .14em rgba(255,255,255,.5)}
+.cv{flex:1;display:flex;flex-direction:column;position:relative}
+.cv__top{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--font-data);font-size:.5em;letter-spacing:.32em;text-transform:uppercase;opacity:.55}
+.cv__mid{margin-top:auto;margin-bottom:auto;padding-top:2.5em}
+.cv__kicker{font-size:.56em;letter-spacing:.46em;text-transform:uppercase;opacity:.72;margin:0 0 1.3em}
+.cv__title{margin:0;font-family:var(--font-display);font-weight:400;font-size:3em;line-height:1.04;letter-spacing:-.022em}
+.cv__title span{display:block}
+.cv__spectrum{display:flex;width:7.2em;height:.2em;margin-top:2.2em;opacity:.95}
+.cv__spectrum i{flex:1}
+.cv__foot{display:flex;justify-content:space-between;align-items:flex-end;gap:1em}
+.cv__by{display:flex;align-items:center;gap:.7em;font-family:var(--font-display);font-size:1em;letter-spacing:.08em}
+.cv__by .seal{font-size:.9em}
+.cv__years{font-family:var(--font-data);font-size:.5em;letter-spacing:.24em;opacity:.55}
+.bk{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4em;text-align:center}
+.bk .seal{font-size:1.3em}
+.bk p{margin:0;font-family:var(--font-data);font-size:.5em;letter-spacing:.32em;text-transform:uppercase;opacity:.6}
+
+/* front matter */
+.page--mosaic .pb{justify-content:flex-start;gap:1.4em}
+.mosaic{flex:1;min-height:0;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(18,minmax(0,1fr));gap:.12em;max-height:31em}
+.cap{font-size:.6em;color:var(--usuzumi);margin:0;line-height:1.6;max-width:26em;flex:none}
+.tp{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:3em}
+.tp__kicker{margin:0 0 1.2em;font-size:.52em;letter-spacing:.44em;text-transform:uppercase;color:var(--usuzumi)}
+.tp h1{margin:0;font-family:var(--font-display);font-weight:400;font-size:2.4em;line-height:1.05;letter-spacing:-.02em}
+.tp h1 span{display:block}
+.tp__rule{width:2.4em;height:1px;background:var(--sumi);opacity:.5;margin:2.4em 0 1.6em}
+.tp__by{margin:0;display:flex;align-items:center;gap:.6em;font-family:var(--font-display);font-size:.95em;letter-spacing:.06em}
+.tp__by .seal{font-size:.8em}
+.tp__meta{margin:.8em 0 0;font-family:var(--font-data);font-size:.52em;letter-spacing:.2em;text-transform:uppercase;color:var(--usuzumi)}
+.tp__src{margin:3.4em 0 0;font-size:.66em;line-height:1.75;max-width:23em;color:var(--usuzumi)}
+.prose{display:block;padding-top:1.2em}
+.prose>:first-child{margin-top:0}
+.prose h2{font-family:var(--font-display);font-weight:500;font-size:1.3em;line-height:1.25;margin:0 0 1em;text-wrap:balance}
+.prose h3{font-size:.56em;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--usuzumi);margin:2.3em 0 1em}
+.prose p{font-size:.72em;line-height:1.75;margin:0 0 .9em;max-width:34em}
+.prose ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.5em}
+.prose li{display:grid;grid-template-columns:5.4em 1fr;gap:.8em;font-size:.72em;line-height:1.5}
+.prose li b{font-family:var(--font-data);font-weight:400;font-size:.9em;color:var(--usuzumi)}
+.toc{display:flex;flex-direction:column;margin-block:auto}
+.toc__item{all:unset;box-sizing:border-box;display:flex;align-items:baseline;gap:.7em;padding:.42em 0;cursor:pointer;font-size:.76em}
+.toc__item:hover .toc__t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+.toc__item:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+.toc__t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.toc__dots{flex:1;border-bottom:1px solid var(--hairline);transform:translateY(-.3em);min-width:1em}
+.toc__p{font-family:var(--font-display);font-variant-numeric:tabular-nums}
+.toc__item.major{font-family:var(--font-display);font-size:.94em;margin-top:.8em}
+.toc__item.sub{padding-left:1.6em;font-size:.68em;color:var(--usuzumi)}
+.toc__r{font-family:var(--font-data);font-size:.66em;color:var(--usuzumi)}
+
+/* part openings */
+.dv{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:1.1em;padding-bottom:2em}
+.dv__num{font-family:var(--font-display);font-weight:400;font-size:.9em;letter-spacing:.3em;color:var(--usuzumi)}
+.dv h2{margin:0;font-family:var(--font-display);font-weight:400;font-size:2.1em;line-height:1.05;letter-spacing:-.015em}
+.dv p{margin:0;font-size:.7em;line-height:1.75;color:var(--usuzumi);max-width:22em}
+.dv__range{font-family:var(--font-data);font-size:.56em;letter-spacing:.08em;color:var(--sumi)}
+.strip{display:flex;height:.9em;margin-top:1.4em}
+.strip>span{flex:1;display:flex;flex-direction:column}
+.strip>span>i{flex:1}
+
+/* one page at a time (phones, portrait tablets): slightly larger small print */
+.book.single .lab__name{font-size:.8em}
+.book.single .lab__cmyk,.book.single .irow__meta{font-size:.62em}
+.book.single .rh{font-size:.56em}
+.book.single .copy{font-size:.6em}
+.book.single .num{font-size:.68em;padding:.55em .12em}
+.book.single .cap,.book.single .ihead span{font-size:.64em}
+.book.single .prose p,.book.single .prose li{font-size:.8em}
+.book.single .toc__item{font-size:.84em}
+.book.single .toc__item.sub{font-size:.74em}
+
+/* ---------- control capsule ---------- */
+.dock{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-areas:"prev mid tools next";align-items:center;gap:6px 12px;width:min(900px,100%);box-sizing:border-box;margin:4px auto 14px;padding:7px;border-radius:26px;background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);box-shadow:0 0 0 1px var(--glass-line),0 14px 34px -22px rgba(0,0,0,.5)}
+.ib{width:40px;height:40px;border-radius:50%;border:0;background:var(--tint);color:var(--on-tint);display:grid;place-items:center;cursor:pointer;transition:transform .1s ease-out,opacity .2s;flex:none}
+.ib svg{width:16px;height:16px}
+.ib:active{transform:scale(.92)}
+.ib:disabled{opacity:.18;cursor:default}
+#prev{grid-area:prev}#next{grid-area:next}
+.mid{grid-area:mid;min-width:0;display:flex;flex-direction:column;gap:5px;padding-inline:6px}
+.meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:12px;line-height:1.2;white-space:nowrap;min-width:0}
+.meta b{font-weight:500;font-variant-numeric:tabular-nums;flex:none}
+.meta span{color:var(--glass-muted);overflow:hidden;text-overflow:ellipsis;min-width:0}
+.scrub{-webkit-appearance:none;appearance:none;width:100%;height:18px;margin:0;background:transparent;cursor:pointer;--fill:0%;touch-action:pan-x}
+.scrub::-webkit-slider-runnable-track{height:2px;border-radius:2px;background:linear-gradient(var(--tint),var(--tint)) 0/var(--fill) 100% no-repeat,var(--glass-line)}
+.scrub::-moz-range-track{height:2px;border-radius:2px;background:linear-gradient(var(--tint),var(--tint)) 0/var(--fill) 100% no-repeat,var(--glass-line)}
+.scrub::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--tint);margin-top:-5.5px;border:0;transition:transform .1s}
+.scrub::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--tint);border:0}
+.scrub:active::-webkit-slider-thumb{transform:scale(1.35)}
+.tools{grid-area:tools;display:flex;align-items:center;gap:2px}
+.tb{height:36px;padding:0 12px;border-radius:18px;border:0;background:transparent;color:var(--glass-ink);display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:13px;cursor:pointer;white-space:nowrap;transition:transform .1s ease-out,background-color .15s}
+.tb svg{width:15px;height:15px;opacity:.8;flex:none}
+.tb:hover{background:var(--glass-line)}
+.tb:active{transform:scale(.95)}
+.tb--find{display:none}
+.go{display:flex;align-items:center;margin-left:4px}
+.go input{width:74px;height:36px;box-sizing:border-box;border:0;border-radius:18px;background:var(--glass-line);color:var(--glass-ink);font-family:var(--font-data);font-size:13px;text-align:center;padding:0 10px}
+.go input::placeholder{color:var(--glass-muted)}
+.go input[aria-invalid="true"],.find input[aria-invalid="true"]{box-shadow:inset 0 0 0 1.5px var(--shu)}
+.find{position:absolute;inset:0;z-index:2;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;border-radius:inherit;background:var(--sheet);box-shadow:0 0 0 1px var(--glass-line)}
+.find__lab{font-family:var(--font-display);font-size:15px;color:var(--glass-muted)}
+.find input{flex:1;min-width:0;height:40px;border:0;background:transparent;color:var(--glass-ink);font-family:var(--font-data);font-size:16px;letter-spacing:.08em;padding:0 4px;outline:none}
+.find input:focus-visible{outline:none}
+.find__go{height:40px;padding:0 18px;border-radius:20px;border:0;background:var(--tint);color:var(--on-tint);font-size:14px;cursor:pointer}
+.find__x{height:40px;padding:0 12px;border-radius:20px;border:0;background:transparent;color:var(--glass-muted);font-size:14px;cursor:pointer}
+@media (max-width:620px){
+  .dock{gap:4px;padding:6px;border-radius:24px;margin-bottom:10px}
+  .tb span{display:none}
+  .tb{width:40px;padding:0}
+  .go{display:none}
+  .tb--find{display:inline-flex}
+  .mid{padding-inline:4px}
+}
+@media (max-width:420px){ .meta span{display:none} }
+@media (max-width:340px){
+  .dock{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"prev mid next" "tools tools tools"}
+  .tools{justify-content:center}
+}
+@media (pointer:coarse){
+  .ib{width:44px;height:44px}
+  .tb{height:44px;border-radius:22px;min-width:44px}
+  .go input{height:44px;border-radius:22px;font-size:16px}
+}
+
+/* ---------- color sheet ---------- */
+.sheet{position:fixed;inset:0;z-index:50}
+.sheet__scrim{position:absolute;inset:0;background:var(--scrim);opacity:0}
+.sheet__card{position:absolute;box-sizing:border-box;background:var(--sheet);color:var(--glass-ink);box-shadow:0 0 0 1px var(--glass-line),0 30px 70px -20px rgba(0,0,0,.55);overflow:auto;overscroll-behavior:contain;will-change:transform}
+.sheet.side .sheet__card{top:14px;right:14px;bottom:14px;width:min(380px,calc(100% - 28px));border-radius:24px}
+.sheet.bottom .sheet__card{left:0;right:0;bottom:0;max-height:90%;border-radius:24px 24px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
+.grab{height:26px;display:grid;place-items:center;cursor:grab;touch-action:none}
+.grab::before{content:"";width:38px;height:5px;border-radius:3px;background:var(--glass-muted);opacity:.45}
+.sheet.side .grab{display:none}
+.sheet__top{position:relative;padding:0 18px;touch-action:none}
+.sheet.side .sheet__top{padding-top:18px}
+.sheet__sw{height:168px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.sheet.bottom .sheet__sw{height:112px}
+.sheet__x{position:absolute;top:10px;right:28px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.82);color:#1b1b1d;display:grid;place-items:center;cursor:pointer;transition:transform .1s}
+.sheet.side .sheet__x{top:28px}
+.sheet__x:active{transform:scale(.92)}
+.sheet__x svg{width:14px;height:14px}
+.sheet__body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:18px}
+.sheet__eyebrow{margin:0 0 6px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--glass-muted)}
+.sheet__name{margin:0;font-family:var(--font-display);font-weight:500;font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.vals{display:flex;flex-direction:column;border-top:1px solid var(--glass-line)}
+.val{all:unset;box-sizing:border-box;display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:10px;min-height:46px;border-bottom:1px solid var(--glass-line);cursor:pointer;transition:background-color .15s}
+.val:hover{background:var(--glass-line)}
+.val:active{background:var(--glass-line)}
+.val:focus-visible{outline:2px solid var(--shu);outline-offset:-2px}
+.val__k{font-size:10.5px;letter-spacing:.2em;color:var(--glass-muted);padding-left:2px}
+.val__v{font-family:var(--font-data);font-size:13.5px}
+.val__c{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--glass-muted);padding-right:4px}
+.used{margin:0;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--glass-muted)}
+.crows{display:flex;flex-direction:column;margin-top:-8px;border-top:1px solid var(--glass-line)}
+.crow{all:unset;box-sizing:border-box;display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;padding:12px 6px 12px 2px;border-bottom:1px solid var(--glass-line);cursor:pointer;transition:background-color .15s,transform .1s}
+.crow:hover{background:var(--glass-line)}
+.crow:active{transform:scale(.985)}
+.crow:focus-visible{outline:2px solid var(--shu);outline-offset:-2px}
+.crow__no{font-family:var(--font-display);font-size:15px;font-variant-numeric:tabular-nums;letter-spacing:.04em;padding-left:4px}
+.crow__body{min-width:0;display:flex;flex-direction:column;gap:7px}
+.crow__strip{display:flex;height:34px;border-radius:3px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.crow__strip i{flex:1;position:relative}
+.crow__strip i.me::after{content:"";position:absolute;left:50%;bottom:6px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--sheet);box-shadow:0 0 0 1px rgba(0,0,0,.18)}
+.crow__with{font-size:11.5px;line-height:1.4;color:var(--glass-muted)}
+.link{all:unset;box-sizing:border-box;cursor:pointer;font-size:13px;display:inline-flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--glass-ink);align-self:flex-start}
+.link:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+
+.toast{position:fixed;left:50%;bottom:calc(var(--dock-h,90px) + 26px);transform:translateX(-50%);z-index:60;max-width:calc(100% - 32px);box-sizing:border-box;background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);color:var(--glass-ink);box-shadow:0 0 0 1px var(--glass-line),0 12px 30px -16px rgba(0,0,0,.5);font-size:13px;line-height:1.4;padding:10px 16px;border-radius:20px;user-select:text;-webkit-user-select:text;word-break:break-word;animation:toastIn .25s ease-out}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
+
+@media (prefers-reduced-motion: reduce){
+  .sw,.edge,.ib,.tb,.crow{transition:none}
+  .combo.flash .sws,.irow.flash,.toast{animation:none}
+}
+html{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<noscript><p style="padding:2em;font:16px/1.6 Georgia,serif">This book turns its pages with JavaScript. Please enable it to read.</p></noscript>
+
+<div class="app">
+  <main class="stage" id="stage" aria-label="Book">
+    <div class="book" id="book">
+      <div class="slot left" id="slotL"></div>
+      <div class="slot right" id="slotR"></div>
+      <button type="button" class="edge prev" id="edgePrev" aria-label="Turn back a page"></button>
+      <button type="button" class="edge next" id="edgeNext" aria-label="Turn to the next page"></button>
+    </div>
+  </main>
+
+  <nav class="dock" id="dock" aria-label="Book navigation">
+    <button type="button" class="ib" id="prev" aria-label="Previous page" title="Previous page (←)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+    <div class="mid">
+      <div class="meta" aria-live="polite"><b id="where"></b><span id="section"></span></div>
+      <input type="range" class="scrub" id="scrub" min="0" max="1" value="0" aria-label="Page">
+    </div>
+    <div class="tools">
+      <button type="button" class="tb" id="toContents" aria-label="Contents" title="Contents"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M5 4h8M5 8h8M5 12h8M2.5 4h.01M2.5 8h.01M2.5 12h.01"/></svg><span>Contents</span></button>
+      <button type="button" class="tb" id="toIndex" aria-label="Color Index" title="Color Index"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="2.5" width="4.5" height="4.5"/><rect x="9" y="2.5" width="4.5" height="4.5"/><rect x="2.5" y="9" width="4.5" height="4.5"/><rect x="9" y="9" width="4.5" height="4.5"/></svg><span>Index</span></button>
+      <button type="button" class="tb tb--find" id="findOpen" aria-label="Go to a combination number" title="Go to a combination number"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6.2 2.5 5 13.5M11 2.5 9.8 13.5M2.8 5.8h11M2.2 10.2h11"/></svg></button>
+      <form class="go" id="goForm" autocomplete="off">
+        <label for="goNo" class="sr">Go to combination number, 1 to 348</label>
+        <input id="goNo" name="goNo" inputmode="numeric" pattern="[0-9]*" maxlength="3" placeholder="No. 001" enterkeyhint="go">
+      </form>
+    </div>
+    <button type="button" class="ib" id="next" aria-label="Next page" title="Next page (→)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+    <form class="find" id="findForm" hidden autocomplete="off">
+      <span class="find__lab" aria-hidden="true">No.</span>
+      <label for="findNo" class="sr">Combination number, 1 to 348</label>
+      <input id="findNo" name="findNo" inputmode="numeric" pattern="[0-9]*" maxlength="3" placeholder="1 – 348" enterkeyhint="go">
+      <button type="submit" class="find__go">Go</button>
+      <button type="button" class="find__x" id="findClose">Cancel</button>
+    </form>
+  </nav>
+</div>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetName">
+  <div class="sheet__scrim" id="scrim"></div>
+  <div class="sheet__card" id="card">
+    <div class="grab" id="grab" aria-hidden="true"></div>
+    <div class="sheet__top" id="sheetTop">
+      <div class="sheet__sw" id="sheetSw"></div>
+      <button type="button" class="sheet__x" id="sheetClose" aria-label="Close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg></button>
+    </div>
+    <div class="sheet__body">
+      <div><p class="sheet__eyebrow" id="sheetEyebrow"></p><h2 class="sheet__name" id="sheetName"></h2></div>
+      <div class="vals" id="sheetVals"></div>
+      <p class="used" id="sheetUsed"></p>
+      <div class="crows" id="sheetChips"></div>
+      <button type="button" class="link" id="sheetIndex">Show in the Color Index</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+const DATA = {"colors":[{"n":"Hermosa Pink","v":"","k":[0,30,6,0],"h":"#f1bdc6","r":[241,189,198],"c":[176,227,273],"f":0},{"n":"Corinthian Pink","v":"","k":[0,35,15,0],"h":"#efb0b1","r":[239,176,177],"c":[27,43,87,97,128,169,174,206,246,254,264,342],"f":0},{"n":"Cameo Pink","v":"","k":[10,32,19,0],"h":"#d7adad","r":[215,173,173],"c":[101,105,116,120,165,231],"f":0},{"n":"Fawn","v":"","k":[18,31,30,0],"h":"#c7aa9e","r":[199,170,158],"c":[18,125,308],"f":0},{"n":"Light Brown Drab","v":"","k":[8,30,20,25],"h":"#ab8d8a","r":[171,141,138],"c":[35,68,185,191,223,239,244,268,285,321],"f":0},{"n":"Coral Red","v":"","k":[0,55,40,0],"h":"#e8887d","r":[232,136,125],"c":[92,123,320,332],"f":0},{"n":"Fresh Color","v":"","k":[0,53,45,0],"h":"#e98b78","r":[233,139,120],"c":[240],"f":0},{"n":"Grenadine Pink","v":"","k":[0,62,58,0],"h":"#e57a64","r":[229,122,100],"c":[6,21,112,166,193,201,230,300,315,341],"f":0},{"n":"Eosine Pink","v":"","k":[0,63,23,0],"h":"#e5788b","r":[229,120,139],"c":[34,59,90,108,134,153,197,242,248,276,287,314,327,336],"f":0},{"n":"Spinel Red","v":"","k":[0,70,21,0],"h":"#e36b87","r":[227,107,135],"c":[14,147,165,184,195,224,277],"f":0},{"n":"Old Rose","v":"","k":[15,70,40,0],"h":"#c46771","r":[196,103,113],"c":[55,162,260,265],"f":0},{"n":"Eugenia Red","v":"A","k":[7,76,60,0],"h":"#d15d59","r":[209,93,89],"c":[284],"f":0},{"n":"Eugenia Red","v":"B","k":[0,80,50,10],"h":"#c94f58","r":[201,79,88],"c":[17,77,252,262,270,280,282,325],"f":0},{"n":"Raw Sienna","v":"","k":[18,58,100,12],"h":"#ad6b2e","r":[173,107,46],"c":[3,13,33,70,86,130,131,182,243,247,252,255,268,269,279,293,298,319,327],"f":0},{"n":"Vinaceous Tawny","v":"","k":[17,72,100,6],"h":"#b65c2f","r":[182,92,47],"c":[40,85,244],"f":0},{"n":"Jasper Red","v":"","k":[2,83,100,0],"h":"#da4e2b","r":[218,78,43],"c":[155,194,216,219],"f":0},{"n":"Spectrum Red","v":"","k":[5,100,100,0],"h":"#ce252b","r":[206,37,43],"c":[257,266,301,322],"f":0},{"n":"Red Orange","v":"","k":[9,90,100,0],"h":"#c93f2c","r":[201,63,44],"c":[31,164,179,241,264],"f":0},{"n":"Etruscan Red","v":"","k":[16,80,74,6],"h":"#b54f46","r":[181,79,70],"c":[25,47,97,137,152,185,275],"f":0},{"n":"Burnt Sienna","v":"","k":[22,76,100,15],"h":"#9e4e2c","r":[158,78,44],"c":[198,242,263,285,286,297,312,333,343],"f":0},{"n":"Ocher Red","v":"","k":[18,73,63,20],"h":"#9b5049","r":[155,80,73],"c":[199,283],"f":0},{"n":"Scarlet","v":"","k":[10,95,72,7],"h":"#b93042","r":[185,48,66],"c":[136,308,332],"f":0},{"n":"Carmine","v":"","k":[0,100,75,16],"h":"#b81e39","r":[184,30,57],"c":[39,117,122,154,225,232,307,313],"f":0},{"n":"Indian Lake","v":"","k":[12,89,35,9],"h":"#b33b60","r":[179,59,96],"c":[299,331],"f":0},{"n":"Rosolanc Purple","v":"","k":[30,90,33,0],"h":"#a53d68","r":[165,61,104],"c":[48,144,170,204,277,346],"f":0},{"n":"Pomegranate Purple","v":"","k":[23,100,50,6],"h":"#a52551","r":[165,37,81],"c":[220,271],"f":0},{"n":"Hydrangea Red","v":"","k":[38,90,70,0],"h":"#963e4b","r":[150,62,75],"c":[142],"f":0},{"n":"Brick Red","v":"","k":[22,84,100,18],"h":"#963f29","r":[150,63,41],"c":[37,108,246,322,328],"f":0},{"n":"Carmine Red","v":"","k":[25,95,80,16],"h":"#932e36","r":[147,46,54],"c":[35,51,104,130,181,200,221,228,233,237,245,338],"f":0},{"n":"Pompeian Red","v":"","k":[18,97,74,19],"h":"#972738","r":[151,39,56],"c":[30,71,120,212,311,324],"f":0},{"n":"Red","v":"","k":[30,100,70,10],"h":"#942740","r":[148,39,64],"c":[251,261],"f":0},{"n":"Brown","v":"","k":[35,74,90,35],"h":"#6a3d2a","r":[106,61,42],"c":[110,121,145,161],"f":0},{"n":"Hay's Russet","v":"","k":[37,85,87,35],"h":"#663029","r":[102,48,41],"c":[58,82,95,152,186,231,249,304,314,336,345],"f":0},{"n":"Vandyke Red","v":"","k":[32,95,95,33],"h":"#6c2524","r":[108,37,36],"c":[16,133,147,316,335],"f":0},{"n":"Pansy Purple","v":"","k":[34,100,60,34],"h":"#681b33","r":[104,27,51],"c":[157,273],"f":0},{"n":"Pale Burnt Lake","v":"","k":[25,90,80,40],"h":"#6b2829","r":[107,40,41],"c":[124,171,177,205,217,258,269,283],"f":0},{"n":"Violet Red","v":"","k":[75,100,50,5],"h":"#542d50","r":[84,45,80],"c":[9],"f":0},{"n":"Vistoris Lake","v":"","k":[40,71,55,40],"h":"#5e3c3d","r":[94,60,61],"c":[63,91,165,226,290,337],"f":0},{"n":"Sulphur Yellow","v":"","k":[4,4,28,0],"h":"#f3edbf","r":[243,237,191],"c":[52,72,80,104,132,135,151,208,246,254,270,294,296,310,315,320,321,326],"f":1},{"n":"Pale Lemon Yellow","v":"","k":[0,4,38,0],"h":"#feefab","r":[254,239,171],"c":[3,31,60,76,99,109,111,169,185,195,203,228,241,261,272,281,290,292,336],"f":1},{"n":"Naples Yellow","v":"","k":[2,7,44,0],"h":"#f8e59e","r":[248,229,158],"c":[14,115,166,193,303,325],"f":1},{"n":"Ivory Buff","v":"","k":[8,15,40,0],"h":"#e5cf9d","r":[229,207,157],"c":[11,50,94,102,126,178,184,190,209,214,235,243,262,266,301,343],"f":1},{"n":"Seashell Pink","v":"","k":[0,19,23,0],"h":"#f7d1b7","r":[247,209,183],"c":[45,84,88,113,150,176,194,276,334],"f":1},{"n":"Light Pinkish Cinnamon","v":"","k":[0,25,40,0],"h":"#f5c396","r":[245,195,150],"c":[317],"f":1},{"n":"Pinkish Cinnamon","v":"","k":[5,32,53,0],"h":"#e5af7d","r":[229,175,125],"c":[78,161,175,232,258,263,292,305,310],"f":1},{"n":"Cinnamon Buff","v":"","k":[0,25,57,0],"h":"#f5c17c","r":[245,193,124],"c":[23,127,137,180,210,234,246,323,344],"f":1},{"n":"Cream Yellow","v":"","k":[0,28,68,0],"h":"#f4ba69","r":[244,186,105],"c":[122,192,215,226,267,278,294,295,300,302,304,311,329,342],"f":1},{"n":"Golden Yellow","v":"","k":[2,42,74,0],"h":"#e99c59","r":[233,156,89],"c":[26,81,132,138,140,179,206,229,309,315],"f":1},{"n":"Vinaceous Cinnamon","v":"","k":[4,40,42,0],"h":"#e4a187","r":[228,161,135],"c":[203,205,213,256,260,279,299],"f":1},{"n":"Ochraceous Salmon","v":"","k":[15,38,55,0],"h":"#cc9c75","r":[204,156,117],"c":[32,71,121,186,217,220,223,238,296,339],"f":1},{"n":"Isabella Color","v":"","k":[15,28,60,10],"h":"#bca06b","r":[188,160,107],"c":[4,12,241,292],"f":1},{"n":"Maple","v":"","k":[5,26,56,20],"h":"#bb9a67","r":[187,154,103],"c":[282],"f":1},{"n":"Olive Buff","v":"","k":[16,6,42,12],"h":"#bbc190","r":[187,193,144],"c":[83,175,200,330,348],"f":1},{"n":"Ecru","v":"","k":[20,25,40,6],"h":"#baa98c","r":[186,169,140],"c":[167,249,275,279,292,302,317,327],"f":1},{"n":"Yellow","v":"","k":[0,0,100,0],"h":"#fff108","r":[255,241,8],"c":[22,62,68,154,240,251,295,313],"f":1},{"n":"Lemon Yellow","v":"","k":[5,0,85,0],"h":"#f4eb4c","r":[244,235,76],"c":[45,123,138,158,168,173,189,210,253,259,289,298,306,317,333],"f":1},{"n":"Apricot Yellow","v":"","k":[0,10,100,0],"h":"#fdda1d","r":[253,218,29],"c":[107,129,163,198,213,247,265,284,305,319],"f":1},{"n":"Pyrite Yellow","v":"","k":[23,25,80,0],"h":"#bfad57","r":[191,173,87],"c":[239,250,255,287],"f":1},{"n":"Olive Ocher","v":"","k":[18,26,90,0],"h":"#ccae46","r":[204,174,70],"c":[66,148,149,156,157,249,278],"f":1},{"n":"Yellow Ocher","v":"","k":[12,28,88,0],"h":"#d7af46","r":[215,175,70],"c":[42,96,118,124,126,191,222,325],"f":1},{"n":"Orange Yellow","v":"","k":[0,33,100,0],"h":"#f0ad2c","r":[240,173,44],"c":[114,148,153,164,170,257,286,338],"f":1},{"n":"Yellow Orange","v":"","k":[0,45,100,0],"h":"#eb952f","r":[235,149,47],"c":[2,53,89,151,171,209,222,235,267,288,297,312,319,335],"f":1},{"n":"Apricot Orange","v":"","k":[0,55,75,0],"h":"#e88552","r":[232,133,82],"c":[211,253,309,328],"f":1},{"n":"Orange","v":"","k":[0,68,100,0],"h":"#e36c2b","r":[227,108,43],"c":[7,46,141,144,149,256,272],"f":1},{"n":"Peach Red","v":"","k":[0,80,90,0],"h":"#df5536","r":[223,85,54],"c":[115,250,274,285,298,303,326,340],"f":1},{"n":"English Red","v":"","k":[13,73,100,0],"h":"#c6602f","r":[198,96,47],"c":[1,131,190,308,339],"f":1},{"n":"Cinnamon Rufous","v":"","k":[20,60,82,5],"h":"#b46f46","r":[180,111,70],"c":[8,10,103,158,172,204,206],"f":1},{"n":"Orange Rufous","v":"","k":[18,65,100,8],"h":"#b2652f","r":[178,101,47],"c":[91,102,222],"f":1},{"n":"Sulphine Yellow","v":"","k":[24,32,100,4],"h":"#b79a34","r":[183,154,52],"c":[36,65,142,160,252],"f":1},{"n":"Khaki","v":"","k":[24,45,100,6],"h":"#b08332","r":[176,131,50],"c":[129,146,159,236,248],"f":1},{"n":"Citron Yellow","v":"","k":[35,17,95,0],"h":"#a8b043","r":[168,176,67],"c":[40,87,145,150,153,196,305,323],"f":1},{"n":"Citrine","v":"","k":[36,32,100,7],"h":"#9a8f37","r":[154,143,55],"c":[59,93,132,133,262],"f":1},{"n":"Buffy Citrine","v":"","k":[42,40,82,8],"h":"#8b804d","r":[139,128,77],"c":[100,177,233],"f":1},{"n":"Dark Citrine","v":"","k":[38,34,67,20],"h":"#817c56","r":[129,124,86],"c":[10,41,274,304],"f":1},{"n":"Light Grayish Olive","v":"","k":[43,36,62,19],"h":"#7a795c","r":[122,121,92],"c":[107,184],"f":1},{"n":"Kronbergs Green","v":"","k":[48,35,70,12],"h":"#7b805b","r":[123,128,91],"c":[29],"f":1},{"n":"Olive","v":"","k":[48,38,100,15],"h":"#797835","r":[121,120,53],"c":[96,201,254,258,277,310,334],"f":1},{"n":"Orange Citrine","v":"","k":[28,48,92,24],"h":"#8a6833","r":[138,104,51],"c":[212,342],"f":1},{"n":"Sudan Brown","v":"","k":[25,60,65,19],"h":"#94614e","r":[148,97,78],"c":[207,214,273],"f":1},{"n":"Olive Green","v":"","k":[56,40,85,22],"h":"#636a40","r":[99,106,64],"c":[66,243,270,297],"f":1},{"n":"Light Brownish Olive","v":"","k":[42,46,73,24],"h":"#756748","r":[117,103,72],"c":[199,318],"f":1},{"n":"Deep Grayish Olive","v":"","k":[50,48,78,37],"h":"#585338","r":[88,83,56],"c":[146,343],"f":1},{"n":"Pale Raw Umber","v":"","k":[46,63,87,32],"h":"#624930","r":[98,73,48],"c":[26,73,160,234,296],"f":1},{"n":"Sepia","v":"","k":[48,60,100,40],"h":"#554424","r":[85,68,36],"c":[24,288],"f":1},{"n":"Madder Brown","v":"","k":[36,88,100,38],"h":"#602a1f","r":[96,42,31],"c":[28,79,98,173,237,275,323],"f":1},{"n":"Mars Brown / Tobacco","v":"","k":[39,76,100,47],"h":"#54311e","r":[84,49,30],"c":[19],"f":1},{"n":"Vandyke Brown","v":"","k":[56,71,97,52],"h":"#3e301f","r":[62,48,31],"c":[110,113,118,182,192,328],"f":1},{"n":"Turquoise Green","v":"","k":[29,0,24,0],"h":"#b3dac3","r":[179,218,195],"c":[36,74,147,163,173,202,223,230,263,272,285,293,300,305,317,346],"f":2},{"n":"Glaucous Green","v":"","k":[30,9,24,0],"h":"#afc8ba","r":[175,200,186],"c":[7,150,171,207,239,260],"f":2},{"n":"Dark Greenish Glaucous","v":"","k":[30,15,36,0],"h":"#afbca0","r":[175,188,160],"c":[264,311],"f":2},{"n":"Yellow Green","v":"","k":[35,0,72,0],"h":"#a5ce70","r":[165,206,112],"c":[111,141,276,326,334],"f":2},{"n":"Light Green Yellow","v":"","k":[26,5,85,0],"h":"#becc55","r":[190,204,85],"c":[61,289,291,311,346],"f":2},{"n":"Night Green","v":"","k":[52,0,100,0],"h":"#7ebd43","r":[126,189,67],"c":[19,32,158,326],"f":2},{"n":"Olive Yellow","v":"","k":[40,30,80,0],"h":"#989959","r":[152,153,89],"c":[124,211,265,347],"f":2},{"n":"Artemisia Green","v":"","k":[57,28,39,8],"h":"#6b8c86","r":[107,140,134],"c":[293,312],"f":2},{"n":"Andover Green","v":"","k":[60,40,50,10],"h":"#66786f","r":[102,120,111],"c":[244,346],"f":2},{"n":"Rainette Green","v":"","k":[42,20,62,28],"h":"#6f8059","r":[111,128,89],"c":[73,162,188,266,301],"f":2},{"n":"Chromium Green","v":"","k":[50,16,58,20],"h":"#6b8c68","r":[107,140,104],"c":[105,200,219,283],"f":2},{"n":"Pistachio Green","v":"","k":[64,29,56,6],"h":"#5f8872","r":[95,136,114],"c":[127,137],"f":2},{"n":"Sea Green","v":"","k":[80,0,51,0],"h":"#03aa8f","r":[3,170,143],"c":[17,21,58,86,133,250,260,284,291,340,347],"f":2},{"n":"Benzol Green","v":"","k":[100,15,55,0],"h":"#008b7e","r":[0,139,126],"c":[15,54,92,122,155,247,266,267,281,304,306],"f":2},{"n":"Light Porcelain Green","v":"","k":[86,22,50,3],"h":"#07887e","r":[7,136,126],"c":[44,193,328],"f":2},{"n":"Green","v":"","k":[75,21,73,0],"h":"#439166","r":[67,145,102],"c":[198,216,293],"f":2},{"n":"Dull Viridian Green","v":"","k":[90,20,80,0],"h":"#00895e","r":[0,137,94],"c":[136,256,306,316],"f":2},{"n":"Oil Green","v":"","k":[53,28,100,8],"h":"#788b3b","r":[120,139,59],"c":[245,299,320],"f":2},{"n":"Diamine Green","v":"","k":[87,20,100,10],"h":"#087f41","r":[8,127,65],"c":[38,146,217,242,251,313],"f":2},{"n":"Cossack Green","v":"","k":[76,32,91,18],"h":"#3f6f41","r":[63,111,65],"c":[5,135,262,270,278,294,319,341,348],"f":2},{"n":"Lincoln Green","v":"","k":[60,48,86,37],"h":"#4a4f32","r":[74,79,50],"c":[70,121,203,210,280,290],"f":2},{"n":"Blackish Olive","v":"","k":[56,32,63,55],"h":"#3c4c3b","r":[60,76,59],"c":[109,318,336],"f":2},{"n":"Deep Slate Olive","v":"","k":[76,60,80,62],"h":"#222b22","r":[34,43,34],"c":[189,229,268,303,310,321,332,341,342,348],"f":2},{"n":"Nile Blue","v":"","k":[25,0,10,0],"h":"#bae0db","r":[186,224,219],"c":[25,250,268,302,306,330,345],"f":3},{"n":"Pale King's Blue","v":"","k":[33,4,7,0],"h":"#a4d0da","r":[164,208,218],"c":[16,49,72,75,167,196,213,234,287],"f":3},{"n":"Light Glaucous Blue","v":"","k":[35,10,14,0],"h":"#a1c2c5","r":[161,194,197],"c":[54,93,119,152,178,204,227,320,339,341],"f":3},{"n":"Salvia Blue","v":"","k":[41,25,10,0],"h":"#90a5ba","r":[144,165,186],"c":[29,129,135,139,142,188,209,212,237,272,294,321,330],"f":3},{"n":"Cobalt Green","v":"","k":[42,0,42,0],"h":"#8fcaa1","r":[143,202,161],"c":[156,188,201,202,230,271,281,282,290,291,308,333],"f":3},{"n":"Calamine Blue","v":"","k":[50,0,20,0],"h":"#77c6c3","r":[119,198,195],"c":[20,41,65,159,176,255,261,287,291,300],"f":3},{"n":"Venice Green","v":"","k":[58,0,30,0],"h":"#61beb2","r":[97,190,178],"c":[78,128,138,189,283,345],"f":3},{"n":"Cerulian Blue","v":"","k":[84,26,32,0],"h":"#0f8896","r":[15,136,150],"c":[1,63,99,125,148,227,240,264],"f":3},{"n":"Peacock Blue","v":"","k":[100,19,43,0],"h":"#00888b","r":[0,136,139],"c":[131,286],"f":3},{"n":"Green Blue","v":"","k":[82,24,40,3],"h":"#178889","r":[23,136,137],"c":[12,74,79,178,208,252,259,271,330],"f":3},{"n":"Olympic Blue","v":"","k":[69,44,10,0],"h":"#5679a1","r":[86,121,161],"c":[44,67,157,194,231,274,324],"f":3},{"n":"Blue","v":"","k":[95,54,0,0],"h":"#0064a2","r":[0,100,162],"c":[49,51,88,143,154,186,191,215,257,267,295,333],"f":3},{"n":"Antwarp Blue","v":"","k":[100,40,30,10],"h":"#006981","r":[0,105,129],"c":[85,106,114,140,163,172,208,244,258,281,299,302,334],"f":3},{"n":"Helvetia Blue","v":"","k":[100,62,19,10],"h":"#00527c","r":[0,82,124],"c":[39,48,161,187,218,259,312,347],"f":3},{"n":"Dark Medici Blue","v":"","k":[70,45,45,15],"h":"#50696b","r":[80,105,107],"c":[160,224,241,249],"f":3},{"n":"Dusky Green","v":"","k":[100,30,64,50],"h":"#00463e","r":[0,70,62],"c":[94,219,225,278,284,318,332,338],"f":3},{"n":"Deep Lyons Blue","v":"","k":[100,85,15,6],"h":"#213b71","r":[33,59,113],"c":[22,38,101,126,179,199,236,247,314,344],"f":3},{"n":"Violet Blue","v":"","k":[85,79,38,16],"h":"#383f59","r":[56,63,89],"c":[75,83,89,98,125,233,286,289,297,309,339],"f":3},{"n":"Vandar Poel's Blue","v":"","k":[100,73,43,10],"h":"#17475f","r":[23,71,95],"c":[5,77,151,167,168,309,343],"f":3},{"n":"Dark Tyrian Blue","v":"","k":[90,66,36,50],"h":"#162e3e","r":[22,46,62],"c":[2,60,67,119,141,245,279],"f":3},{"n":"Dull Violet Black","v":"","k":[100,90,38,50],"h":"#0e172d","r":[14,23,45],"c":[95,106,145,265,277,289,295,331],"f":3},{"n":"Deep Indigo","v":"","k":[100,92,52,60],"h":"#091120","r":[9,17,32],"c":[6,28,139,155,182,211,232],"f":3},{"n":"Deep Slate Green","v":"","k":[80,50,60,70],"h":"#162826","r":[22,40,38],"c":[84,149,166,271,318,325],"f":3},{"n":"Grayish Lavender","v":"A","k":[28,28,0,0],"h":"#adaac9","r":[173,170,201],"c":[8,15,159,177,218,248,307],"f":4},{"n":"Grayish Lavender","v":"B","k":[25,33,20,0],"h":"#b5a2a8","r":[181,162,168],"c":[47,56,174,187,235,327,329,338],"f":4},{"n":"Laelia Pink","v":"","k":[20,48,18,0],"h":"#bd8a9c","r":[189,138,156],"c":[20,254,280,337],"f":4},{"n":"Lilac","v":"","k":[28,54,8,0],"h":"#ad7ca0","r":[173,124,160],"c":[143,162,282,347],"f":4},{"n":"Eupatorium Purple","v":"","k":[25,79,12,0],"h":"#af5182","r":[175,81,130],"c":[215,315,322],"f":4},{"n":"Light Mauve","v":"","k":[43,62,5,0],"h":"#8e6a9a","r":[142,106,154],"c":[23,80,128,134,180,274,331],"f":4},{"n":"Aconite Violet","v":"","k":[39,68,5,0],"h":"#966295","r":[150,98,149],"c":[43,64,90,187,220,257,269,301,307,324,344],"f":4},{"n":"Dull Blue Violet","v":"","k":[57,60,17,0],"h":"#76688e","r":[118,104,142],"c":[9,100],"f":4},{"n":"Dark Soft Violet","v":"","k":[70,68,13,0],"h":"#5e5b8a","r":[94,91,138],"c":[64,127,197],"f":4},{"n":"Blue Violet","v":"","k":[72,80,0,0],"h":"#5a498c","r":[90,73,140],"c":[116,175,196,322,345],"f":4},{"n":"Purple Drab","v":"","k":[38,65,49,26],"h":"#755051","r":[117,80,81],"c":[236],"f":4},{"n":"Deep Violet / Plumbeous","v":"","k":[61,52,43,7],"h":"#686b72","r":[104,107,114],"c":[183,192,218],"f":4},{"n":"Vernonia Purple","v":"","k":[42,78,46,15],"h":"#7d4958","r":[125,73,88],"c":[13,24,168,183],"f":4},{"n":"Dark Slate Purple","v":"","k":[64,85,60,10],"h":"#623f4d","r":[98,63,77],"c":[225,248],"f":4},{"n":"Taupe Brown","v":"","k":[30,70,35,40],"h":"#6b3f4c","r":[107,63,76],"c":[57,123,174,224,275,280,288],"f":4},{"n":"Violet Carmine","v":"","k":[64,90,70,10],"h":"#623844","r":[98,56,68],"c":[337],"f":4},{"n":"Violet","v":"","k":[85,90,18,0],"h":"#443a72","r":[68,58,114],"c":[42,56,130,156,164,181,205,214,226,316,331,335],"f":4},{"n":"Red Violet","v":"","k":[76,100,25,15],"h":"#4b2657","r":[75,38,87],"c":[4,37,134,136,170,172,183,316],"f":4},{"n":"Cotinga Purple","v":"","k":[66,100,42,40],"h":"#3d1834","r":[61,24,52],"c":[61,181,238,253,307,329,348],"f":4},{"n":"Dusky Madder Violet","v":"","k":[75,100,46,30],"h":"#3d1e3b","r":[61,30,59],"c":[18,50,53,82,103,314],"f":4},{"n":"White","v":"","k":[0,0,0,0],"h":"#ffffff","r":[255,255,255],"c":[55],"f":5},{"n":"Neutral Gray","v":"","k":[29,18,20,0],"h":"#afb9b7","r":[175,185,183],"c":[34,139,180,195,197,221,228,229,273,303,324,340],"f":5},{"n":"Mineral Gray","v":"","k":[33,18,25,7],"h":"#9daba5","r":[157,171,165],"c":[11,30],"f":5},{"n":"Warm Gray","v":"","k":[37,28,36,3],"h":"#999e91","r":[153,158,145],"c":[69,76,81,143,169,238,259,261],"f":5},{"n":"Slate Color","v":"","k":[85,70,62,30],"h":"#2d3d41","r":[45,61,65],"c":[27,33,57,140,202,243,245,251,253,263,296,329,335],"f":5},{"n":"Black","v":"","k":[20,10,15,100],"h":"#131515","r":[19,21,21],"c":[46,52,62,69,112,117,144,190,207,216,221,242,255,256,269,276,288,298,313,323,337,340,344],"f":5}],"families":[{"title":"Reds & Red-Purples","from":0,"to":37},{"title":"Yellows & Yellow-Reds","from":38,"to":86},{"title":"Greens & Yellow-Greens","from":87,"to":109},{"title":"Blues & Blue-Greens","from":110,"to":132},{"title":"Purples & Blue-Purples","from":133,"to":152},{"title":"White, Grays & Black","from":153,"to":158}]};
+
+/* ---------- data ---------- */
+const C = DATA.colors;            // {n:name, v:variant, k:[c,m,y,k], h:hex, r:[r,g,b], c:[combos], f:family}
+const FAM = DATA.families;        // {title, from, to}
+const COMBOS = {};
+C.forEach((col, i) => col.c.forEach(n => (COMBOS[n] ||= []).push(i)));
+const pad3 = n => String(n).padStart(3, '0');
+const cmyk = k => `C${k[0]} M${k[1]} Y${k[2]} K${k[3]}`;
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const dname = i => C[i].n + (C[i].v ? ' ' + C[i].v : '');
+const $ = s => document.querySelector(s);
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+
+/* ---------- motion primitives (springs, projection, rubber-band) ---------- */
+// Damping ratio + response, as in Apple's fluid-interface model; mass 1.
+function spring({from, to, velocity = 0, damping = 1, response = .45, eps = .0005, onUpdate, onRest}) {
+  const k = (2 * Math.PI / response) ** 2, c = 4 * Math.PI * damping / response;
+  let x = from, v = velocity, last = null, raf = 0, live = true;
+  const tick = now => {
+    if (!live) return;
+    if (last == null) last = now - 16;
+    const dt = Math.min(.064, (now - last) / 1000); last = now;
+    const n = Math.max(1, Math.ceil(dt / .004)), h = dt / n;
+    for (let i = 0; i < n; i++) { v += (-k * (x - to) - c * v) * h; x += v * h; }
+    if (Math.abs(x - to) < eps && Math.abs(v) < eps * 20) { x = to; v = 0; live = false; onUpdate(x); onRest && onRest(); return; }
+    onUpdate(x); raf = requestAnimationFrame(tick);
+  };
+  raf = requestAnimationFrame(tick);
+  return {stop() { live = false; cancelAnimationFrame(raf); }, get x() { return x; }, get v() { return v; }, to};
+}
+const project = (v, d = .998) => (v / 1000) * d / (1 - d);           // where a flick would come to rest
+const rubber = (o, dim, c = .55) => (o * dim * c) / (dim + c * Math.abs(o));
+function tracker() {
+  const h = [];
+  return {
+    add(x, t) { h.push({x, t}); while (h.length > 2 && t - h[0].t > 90) h.shift(); },
+    velocity() { if (h.length < 2) return 0; const a = h[0], b = h[h.length - 1]; return b.t > a.t ? (b.x - a.x) / (b.t - a.t) * 1000 : 0; }
+  };
+}
+const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- pagination: re-flows to the screen, measured rather than guessed ---------- */
+const PARTS = [
+  {roman: 'I', title: 'Two Colors', from: 1, to: 120, blurb: 'Pairs of colors. The simplest combinations, and often the boldest.'},
+  {roman: 'II', title: 'Three Colors', from: 121, to: 240, blurb: 'A third color shifts the balance between the other two.'},
+  {roman: 'III', title: 'Four Colors', from: 241, to: 348, blurb: 'Fuller palettes, given a page each.'},
+];
+let PAGES = [], comboPage = {}, colorPage = {}, P = {}, N = 0, planSig = '';
+function buildPages(plan) {
+  PAGES = []; comboPage = {}; colorPage = {}; P = {};
+  const add = (t, extra = {}) => PAGES.push({t, key: t, ...extra}) - 1;
+  P.cover = add('cover'); P.mosaic = add('mosaic'); P.title = add('title');
+  plan.prose.about.forEach((blocks, k) => { const i = add('about', {blocks, key: k ? 'about' + k : 'about'}); if (!k) P.about = i; });
+  plan.toc.forEach((items, k) => { const i = add('contents', {items, key: k ? 'contents' + k : 'contents'}); if (!k) P.contents = i; });
+  for (const part of PARTS) {
+    part.page = add('divider', {part, key: 'part' + part.roman});
+    const per = part.from > 240 ? 1 : plan.per;
+    for (let n = part.from; n <= part.to; n += per) {
+      const ns = [];
+      for (let k = 0; k < per && n + k <= part.to; k++) { ns.push(n + k); comboPage[n + k] = PAGES.length; }
+      add('combo', {part, ns});
+    }
+  }
+  P.index = add('idivider');
+  FAM.forEach((fam, fi) => {
+    fam.page = PAGES.length;
+    plan.breaks[fi].forEach((items, k) => { const idx = add('index', {fam: fi, items, first: k === 0}); items.forEach(i => (colorPage[i] = idx)); });
+  });
+  plan.prose.notes.forEach((blocks, k) => { const i = add('notes', {blocks, key: k ? 'notes' + k : 'notes'}); if (!k) P.notes = i; });
+  if (PAGES.length % 2 === 0) add('blank');
+  P.back = add('back');
+  N = PAGES.length;
+}
+function anchorOf(idx) {
+  const p = PAGES[idx];
+  if (!p) return {key: 'cover'};
+  if (p.t === 'combo') return {combo: p.ns[0]};
+  if (p.t === 'index') return {color: p.items[0]};
+  return {key: p.key};
+}
+function pageOf(a) {
+  if (!a) return 0;
+  if (a.combo) return comboPage[a.combo] ?? 0;
+  if (a.color != null) return colorPage[a.color] ?? 0;
+  const i = PAGES.findIndex(p => p.key === a.key);
+  return i < 0 ? 0 : i;
+}
+
+/* prose pages are lists of blocks, so they can split across pages on small screens */
+const PROSE = {
+  about: {rh: 'About this edition', blocks: [
+    `<h2>Sanzo Wada and his color combinations</h2><p>Sanzo Wada (1883–1967) was a Japanese painter, teacher and costume designer, and an early champion of standard color references in Japan. In 1933–34 he published <em>Haishoku Soukan</em>, six small volumes of color combinations for working artists and designers.</p>`,
+    `<p>This dictionary gathers 348 of those combinations from a palette of 159 colors. Many of the English names come from Robert Ridgway’s <em>Color Standards and Color Nomenclature</em> (1912), which is why some sound unusual today.</p>`,
+    `<h3>Arrangement</h3><ul><li><b>001–120</b><span>Two colors</span></li><li><b>121–240</b><span>Three colors</span></li><li><b>241–348</b><span>Four colors</span></li><li><b>Index</b><span>Every color, its CMYK recipe and the combinations that use it</span></li></ul>`,
+    `<h3>Reading</h3><p>Drag a page to turn it, or use the arrows, the arrow keys or the page edges. Select any swatch for its CMYK, RGB and HEX values.</p>`
+  ]},
+  notes: {rh: 'Notes', blocks: [
+    `<h2>Notes on this edition</h2><h3>Color values</h3><p>The book gives each color as a CMYK print recipe. Screens mix light, not ink, so every color here was converted from CMYK to sRGB with a generic print profile. The results are close, but expect some difference from the printed page and between displays. Use the CMYK values for print work.</p>`,
+    `<h3>Checked data</h3><p>The color list and every combination number were checked against the printed color index: 159 colors and 348 combinations, of which 120 use two colors, 120 use three and 108 use four.</p>`,
+    `<h3>Order within a combination</h3><p>Colors in each combination are listed in index order, which can differ from where they sit on the printed page.</p>`
+  ]}
+};
+
+/* ---------- page rendering ---------- */
+const sw = i => `<button type="button" class="sw" data-c="${i}" style="--c:${C[i].h}" aria-label="${esc(dname(i))}, ${cmyk(C[i].k)}"></button>`;
+const rh = t => `<div class="rhw" aria-hidden="true"><div class="rh">${t}</div></div>`;
+const fo = i => `<div class="fo">${i}</div>`;
+function comboHTML(n) {
+  const cs = COMBOS[n], hex = cs.map(i => C[i].h.toUpperCase()).join(', ');
+  return `<section class="combo combo--${cs.length}" data-n="${n}">
+    <div class="combo__head"><span class="combo__no">${pad3(n)}</span>
+      <button type="button" class="copy" data-copy="${hex}" aria-label="Copy hex codes for combination ${pad3(n)}">Copy hex</button></div>
+    <div class="sws" style="--n:${cs.length}">${cs.map(sw).join('')}</div>
+    <div class="labs" style="--n:${cs.length}">${cs.map(i => `<div class="lab"><span class="lab__name">${esc(C[i].n)}${C[i].v ? `<i class="var">${C[i].v}</i>` : ''}</span><span class="lab__cmyk">${cmyk(C[i].k)}</span></div>`).join('')}</div>
+  </section>`;
+}
+const irowHTML = i => `<div class="irow" data-row="${i}">${sw(i)}<div>
+  <div class="irow__name">${esc(C[i].n)}${C[i].v ? `<i class="var">${C[i].v}</i>` : ''}</div>
+  <div class="irow__meta">${cmyk(C[i].k)}  ·  ${C[i].h.toUpperCase()}</div>
+  <div class="nums">${C[i].c.map(n => `<button type="button" class="num" data-goto-combo="${n}" aria-label="Open combination ${pad3(n)}">${pad3(n)}</button>`).join('')}</div>
+</div></div>`;
+const tocItem = (title, page, cls = '', range = '') =>
+  `<button type="button" class="toc__item ${cls}" data-goto-page="${page}"><span class="toc__t">${title}${range ? ` <span class="toc__r">${range}</span>` : ''}</span><span class="toc__dots"></span><span class="toc__p">${page}</span></button>`;
+const tocList = (pg = k => k) => [
+  ['All 159 colors', pg(P.mosaic)],
+  ['About this edition', pg(P.about)],
+  ...PARTS.map(pt => [`${pt.roman}. ${pt.title}`, pg(pt.page), 'major', `${pad3(pt.from)}–${pad3(pt.to)}`]),
+  ['IV. Color Index', pg(P.index), 'major'],
+  ...FAM.map(f => [f.title, pg(f.page), 'sub']),
+  ['Notes on this edition', pg(P.notes), 'major'],
+];
+const strip = list => `<div class="strip" aria-hidden="true">${list.map(cs => `<span>${cs.map(i => `<i style="background:${C[i].h}"></i>`).join('')}</span>`).join('')}</div>`;
+const spectrum = () => C.map(c => `<i style="background:${c.h}"></i>`).join('');
+
+function pageHTML(idx) {
+  const p = PAGES[idx];
+  switch (p.t) {
+    case 'cover':
+      return `<div class="cv">
+        <div class="cv__top"><span>Volume I</span><span>No. 001–348</span></div>
+        <div class="cv__mid">
+          <p class="cv__kicker">A Dictionary of</p>
+          <h1 class="cv__title"><span>Color</span><span>Combinations</span></h1>
+          <div class="cv__spectrum" aria-hidden="true">${spectrum()}</div>
+        </div>
+        <div class="cv__foot"><div class="cv__by">Sanzo Wada <span class="seal" aria-hidden="true"></span></div><div class="cv__years">1933–34</div></div>
+      </div>`;
+    case 'mosaic':
+      return `${rh('All 159 colors')}<div class="pb"><div class="mosaic">${C.map((c, i) => sw(i)).join('')}</div>
+        <p class="cap">Every color in the dictionary, in index order. Select a swatch for its values and the combinations that use it.</p></div>${fo(idx)}`;
+    case 'title':
+      return `<div class="tp">
+        <p class="tp__kicker">A Dictionary of</p>
+        <h1><span>Color</span><span>Combinations</span></h1>
+        <div class="tp__rule" aria-hidden="true"></div>
+        <p class="tp__by">Sanzo Wada <span class="seal" aria-hidden="true"></span></p>
+        <p class="tp__meta">Volume I · 348 combinations · 159 colors</p>
+        <p class="tp__src">First published as <em>Haishoku Soukan</em> in six volumes, 1933–34. An unofficial digital edition for study.</p>
+      </div>${fo(idx)}`;
+    case 'about':
+    case 'notes':
+      return `${rh(PROSE[p.t].rh)}<div class="pb prose">${p.blocks.map(b => PROSE[p.t].blocks[b]).join('')}</div>${fo(idx)}`;
+    case 'contents':
+      return `${rh('Contents')}<div class="pb"><div class="toc">${p.items.map(i => tocItem(...tocList()[i])).join('')}</div></div>${fo(idx)}`;
+    case 'divider': {
+      const pt = p.part, list = [];
+      for (let n = pt.from; n <= pt.to; n++) list.push(COMBOS[n]);
+      return `${rh('Part ' + pt.roman)}<div class="dv"><div class="dv__num">PART ${pt.roman}</div><h2>${pt.title}</h2>
+        <div class="dv__range">Nos. ${pad3(pt.from)}–${pad3(pt.to)} · ${pt.to - pt.from + 1} combinations</div>
+        <p>${pt.blurb}</p>${strip(list)}</div>${fo(idx)}`;
+    }
+    case 'combo':
+      return `${rh(p.part.title)}<div class="pb">${p.ns.map(comboHTML).join('')}</div>${fo(idx)}`;
+    case 'idivider':
+      return `${rh('Part IV')}<div class="dv"><div class="dv__num">PART IV</div><h2>Color Index</h2>
+        <div class="dv__range">159 colors in six families</div>
+        <p>Each entry gives the color’s CMYK print recipe, a screen HEX value, and every combination that uses it.</p>
+        ${strip(C.map((c, i) => [i]))}</div>${fo(idx)}`;
+    case 'index': {
+      const f = FAM[p.fam];
+      return `${rh('Index · ' + f.title)}<div class="pb">
+        ${p.first ? `<div class="ihead"><h2>${f.title}</h2><span>${f.to - f.from + 1} colors</span></div>` : ''}
+        ${p.items.map(irowHTML).join('')}
+      </div>${fo(idx)}`;
+    }
+    case 'back':
+      return `<div class="bk"><span class="seal" aria-hidden="true"></span><p>348 combinations · 159 colors</p></div>`;
+    default:
+      return '';
+  }
+}
+function pageEl(idx, side) {
+  if (idx == null || idx < 0 || idx >= N) return null;
+  const d = document.createElement('div');
+  d.className = `page page--${PAGES[idx].t} ${side}`;
+  d.innerHTML = pageHTML(idx);
+  return d;
+}
+
+/* ---------- book state ---------- */
+const stage = $('#stage'), book = $('#book'), slotL = $('#slotL'), slotR = $('#slotR');
+let mode = '', cur = 0, pw = 400, turn = null, pendingFlash = null, suppressClick = false;
+let bookX = 0, nudge = 0, nudgeSpring = null;
+const spreadOf = p => Math.floor((p + 1) / 2);
+const spreadPages = s => [2 * s - 1, 2 * s];
+const firstOf = s => (s === 0 ? 0 : 2 * s - 1);
+const lastSpread = () => spreadOf(N - 1);
+const shiftOf = s => { if (mode !== 'spread') return 0; const [l, r] = spreadPages(s); return l < 0 ? -pw / 2 : r >= N ? pw / 2 : 0; };
+const applyBook = () => { book.style.transform = `translateX(${(bookX + nudge).toFixed(2)}px)`; };
+
+function fill(slot, idx, side) { slot.replaceChildren(); const el = pageEl(idx, side); if (el) slot.appendChild(el); }
+function render() {
+  if (mode === 'spread') { const s = spreadOf(cur), [l, r] = spreadPages(s); fill(slotL, l, 'left'); fill(slotR, r, 'right'); bookX = shiftOf(s); }
+  else { slotL.replaceChildren(); fill(slotR, cur, 'single'); bookX = 0; }
+  applyBook(); afterMove();
+}
+function visible() {
+  if (!N) return [0];
+  if (mode !== 'spread') return [cur];
+  const [l, r] = spreadPages(spreadOf(cur));
+  return [l, r].filter(i => i >= 0 && i < N);
+}
+
+/* ---------- page turns: one progress value (0 → 1) driven by springs or the pointer ---------- */
+function face(idx, side, cls) {
+  const f = document.createElement('div');
+  f.className = 'face ' + cls;
+  const el = pageEl(idx, side);
+  if (el) f.appendChild(el); else f.classList.add('blank');
+  const sh = document.createElement('div'); sh.className = 'shade'; f.appendChild(sh);
+  return f;
+}
+function beginTurn(dir) {
+  const leaf = document.createElement('div');
+  let tn;
+  if (mode === 'spread') {
+    const s = spreadOf(cur), t = s + dir;
+    if (t < 0 || t > lastSpread()) return null;
+    const [l0, r0] = spreadPages(s), [l1, r1] = spreadPages(t), fwd = dir > 0;
+    leaf.className = 'leaf ' + (fwd ? 'fwd' : 'bwd');
+    leaf.append(face(fwd ? r0 : l0, fwd ? 'right' : 'left', 'a'), face(fwd ? l1 : r1, fwd ? 'left' : 'right', 'b'));
+    if (fwd) fill(slotR, r1, 'right'); else fill(slotL, l1, 'left');
+    tn = {dir, leaf, s, t, l0, r0, l1, r1, x0: shiftOf(s), x1: shiftOf(t), next: firstOf(t)};
+  } else {
+    const to = cur + dir;
+    if (to < 0 || to >= N) return null;
+    leaf.className = 'leaf solo';
+    leaf.append(face(dir > 0 ? cur : to, 'single', 'a'), face(null, 'single', 'b'));
+    if (dir > 0) fill(slotR, to, 'single');
+    tn = {dir, leaf, from: cur, to, x0: 0, x1: 0, next: to};
+  }
+  tn.p = 0; tn.target = 1; tn.ctrl = null;
+  book.appendChild(leaf);
+  setTurn(tn, 0);
+  return tn;
+}
+function setTurn(tn, p) {
+  tn.p = p;
+  const q = clamp(p, 0, 1);
+  const [fa, fb] = tn.leaf.children;
+  if (mode === 'spread') {
+    tn.leaf.style.transform = `perspective(${Math.round(pw * 6)}px) rotateY(${(tn.dir > 0 ? -180 : 180) * q}deg)`;
+    fa.lastChild.style.opacity = (Math.min(q, .5) * 1.1).toFixed(3);
+    fb.lastChild.style.opacity = (Math.max(0, 1 - q) * (q > .5 ? 1.1 : 0)).toFixed(3);
+    bookX = tn.x0 + (tn.x1 - tn.x0) * q; applyBook();
+  } else {
+    const a = tn.dir > 0 ? q : 1 - q;                     // how far the top sheet has swung away
+    tn.leaf.style.transform = `perspective(${Math.round(pw * 5)}px) rotateY(${-165 * a}deg)`;
+    tn.leaf.style.opacity = a < .55 ? 1 : Math.max(0, 1 - (a - .55) / .45);
+    fa.lastChild.style.opacity = (Math.min(a, .5) * 1.1).toFixed(3);
+  }
+}
+function finishTurn(tn, done) {
+  if (tn.ctrl) tn.ctrl.stop();
+  if (done) {
+    if (mode === 'spread') { if (tn.dir > 0) fill(slotL, tn.l1, 'left'); else fill(slotR, tn.r1, 'right'); bookX = tn.x1; }
+    else if (tn.dir < 0) fill(slotR, tn.to, 'single');
+    cur = tn.next;
+  } else {
+    if (mode === 'spread') { if (tn.dir > 0) fill(slotR, tn.r0, 'right'); else fill(slotL, tn.l0, 'left'); bookX = tn.x0; }
+    else if (tn.dir > 0) fill(slotR, tn.from, 'single');
+  }
+  tn.leaf.remove(); applyBook();
+  if (turn === tn) turn = null;
+  afterMove();
+}
+function drive(tn, target, velocity = 0, response = .62) {
+  if (tn.ctrl) tn.ctrl.stop();
+  tn.target = target;
+  tn.ctrl = spring({from: tn.p, to: target, velocity, damping: 1, response,
+    onUpdate: p => setTurn(tn, p), onRest: () => finishTurn(tn, target === 1)});
+}
+function crossfade() {
+  [slotL, slotR].forEach(sl => sl.firstChild && sl.firstChild.animate && sl.firstChild.animate([{opacity: .2}, {opacity: 1}], {duration: 220, easing: 'ease-out'}));
+}
+function settleTurn() { if (turn) { const t = turn; setTurn(t, t.target); finishTurn(t, t.target === 1); } }
+function step(dir) {
+  if (turn) {
+    if (turn.dir === dir && turn.target === 1) settleTurn();                       // tap again: finish this one, start the next
+    else if (turn.dir === dir) { drive(turn, 1, turn.ctrl ? turn.ctrl.v : 0); return; }
+    else if (turn.target === 1) { drive(turn, 0, turn.ctrl ? turn.ctrl.v : 0); return; } // reverse mid-flight
+    else settleTurn();
+  }
+  if (reduced()) {
+    const nextCur = mode === 'spread' ? firstOf(spreadOf(cur) + dir) : cur + dir;
+    if (nextCur < 0 || nextCur >= N || (mode === 'spread' && spreadOf(cur) + dir > lastSpread())) return;
+    cur = nextCur; render(); crossfade(); return;
+  }
+  const tn = beginTurn(dir);
+  if (!tn) { bump(dir); return; }
+  turn = tn; drive(tn, 1);
+}
+function bump(dir) {                       // a soft knock against the cover when there is nothing further
+  if (reduced()) return;
+  if (nudgeSpring) nudgeSpring.stop();
+  nudgeSpring = spring({from: nudge, to: 0, velocity: -dir * 260, damping: .7, response: .35, eps: .3, onUpdate: x => { nudge = x; applyBook(); }});
+}
+function goTo(p, flash) {
+  p = clamp(p | 0, 0, N - 1);
+  settleTurn();
+  pendingFlash = flash || null;
+  const same = mode === 'spread' ? spreadOf(p) === spreadOf(cur) : p === cur;
+  if (same) { cur = mode === 'spread' ? firstOf(spreadOf(p)) : p; afterMove(); return; }
+  const gap = mode === 'spread' ? spreadOf(p) - spreadOf(cur) : p - cur;
+  if (Math.abs(gap) === 1 && !reduced()) { step(gap); return; }
+  cur = mode === 'spread' ? firstOf(spreadOf(p)) : p;
+  render(); crossfade();
+}
+const gotoCombo = n => { if (comboPage[n] != null) goTo(comboPage[n], `[data-n="${n}"]`); };
+const gotoColor = i => goTo(colorPage[i], `[data-row="${i}"]`);
+
+/* ---------- direct manipulation: drag a page, grab one mid-turn, rubber-band at the ends ---------- */
+let drag = null;
+const dragSpan = () => (mode === 'spread' ? pw * 1.5 : pw * 1.1);
+stage.addEventListener('pointerdown', e => {
+  if (e.button !== 0 || !$('#sheet').hidden) return;
+  drag = {id: e.pointerId, x0: e.clientX, y0: e.clientY, tr: tracker(), active: false, moved: false, tn: null, p0: 0};
+  drag.tr.add(e.clientX, e.timeStamp);
+  if (turn && !reduced()) {                 // catch a page that is still moving
+    if (turn.ctrl) turn.ctrl.stop();
+    drag.tn = turn; drag.p0 = turn.p; drag.active = true;
+    try { stage.setPointerCapture(e.pointerId); } catch (_) {}
+  }
+});
+stage.addEventListener('pointermove', e => {
+  if (!drag || e.pointerId !== drag.id) return;
+  drag.tr.add(e.clientX, e.timeStamp);
+  const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+  if (!drag.active) {
+    if (Math.abs(dx) < 10) { if (Math.abs(dy) > 14) drag = null; return; }
+    if (Math.abs(dx) < Math.abs(dy)) { drag = null; return; }
+    drag.active = true; drag.moved = true; drag.x0 = e.clientX;
+    try { stage.setPointerCapture(e.pointerId); } catch (_) {}
+    const dir = dx < 0 ? 1 : -1;
+    if (!reduced()) { settleTurn(); const tn = beginTurn(dir); if (tn) { turn = tn; drag.tn = tn; } }
+    if (!drag.tn) drag.rubber = true;
+    return;
+  }
+  if (Math.abs(dx) > 3) drag.moved = true;
+  const d = e.clientX - drag.x0;
+  if (drag.tn) {
+    const raw = drag.p0 + (-d * drag.tn.dir) / dragSpan();
+    setTurn(drag.tn, raw < 0 ? -rubber(-raw, 1) * .2 : raw > 1 ? 1 + rubber(raw - 1, 1) * .2 : raw);
+  } else if (drag.rubber) {
+    if (nudgeSpring) nudgeSpring.stop();
+    nudge = rubber(d, stage.clientWidth); applyBook();
+  }
+});
+function endDrag(e) {
+  if (!drag || e.pointerId !== drag.id) return;
+  const g = drag; drag = null;
+  if (g.moved) { suppressClick = true; setTimeout(() => (suppressClick = false), 0); }
+  if (g.tn) {
+    const tn = g.tn;
+    if (!g.moved) { drive(tn, tn.target); return; }               // a tap on a moving page just lets it continue
+    const v = (-g.tr.velocity() * tn.dir) / dragSpan();           // progress per second
+    const landing = tn.p + project(v * dragSpan()) / dragSpan();
+    const commit = Math.abs(v) > .7 ? v > 0 : landing > .5;
+    drive(tn, commit ? 1 : 0, v, .5);
+  } else if (g.rubber) {
+    nudgeSpring = spring({from: nudge, to: 0, velocity: g.tr.velocity(), damping: .85, response: .35, eps: .3, onUpdate: x => { nudge = x; applyBook(); }});
+  }
+}
+stage.addEventListener('pointerup', endDrag);
+stage.addEventListener('pointercancel', endDrag);
+
+/* ---------- clicks inside the book ---------- */
+book.addEventListener('click', e => {
+  if (suppressClick) { e.preventDefault(); e.stopPropagation(); return; }
+  const t = e.target.closest('[data-copy],[data-c],[data-goto-combo],[data-goto-page]');
+  if (!t || !book.contains(t) || t.closest('.leaf')) return;
+  if (t.dataset.copy != null) copyText(t.dataset.copy, t);
+  else if (t.dataset.c != null) openColor(+t.dataset.c, t);
+  else if (t.dataset.gotoCombo) gotoCombo(+t.dataset.gotoCombo);
+  else if (t.dataset.gotoPage) goTo(+t.dataset.gotoPage);
+}, true);
+
+/* ---------- toolbar & status ---------- */
+const scrub = $('#scrub');
+const NAMES = {cover: 'Cover', mosaic: 'All colors', title: 'Title', about: 'About', contents: 'Contents', divider: '', idivider: 'Color Index', notes: 'Notes', back: 'Back cover', blank: ''};
+function describe(pages) {
+  const ns = pages.flatMap(i => PAGES[i] && PAGES[i].t === 'combo' ? PAGES[i].ns : []);
+  if (ns.length) {
+    const part = PAGES[pages.find(i => PAGES[i].t === 'combo')].part;
+    return `${part.title} · ${pad3(ns[0])}${ns.length > 1 ? '–' + pad3(ns[ns.length - 1]) : ''}`;
+  }
+  const t = PAGES[pages[pages.length - 1]];
+  if (!t) return '';
+  if (t.t === 'index') return FAM[t.fam].title;
+  if (t.t === 'divider') return t.part.title;
+  return NAMES[t.t] || '';
+}
+function setMeta(pages) {
+  $('#where').textContent = (pages.length > 1 ? `${pages[0]}–${pages[1]}` : `${pages[0]}`) + ` / ${N - 1}`;
+  $('#section').textContent = describe(pages);
+}
+function afterMove() {
+  const pages = visible();
+  setMeta(pages);
+  scrub.value = pages[0];
+  scrub.style.setProperty('--fill', (pages[0] / Math.max(1, N - 1) * 100).toFixed(2) + '%');
+  const atStart = mode === 'spread' ? spreadOf(cur) === 0 : cur === 0;
+  const atEnd = mode === 'spread' ? spreadOf(cur) === lastSpread() : cur === N - 1;
+  $('#prev').disabled = atStart; $('#next').disabled = atEnd;
+  $('#edgePrev').hidden = atStart; $('#edgeNext').hidden = atEnd;
+  const a = anchorOf(pages[0]);
+  try { history.replaceState(null, '', a.combo ? '#c' + pad3(a.combo) : '#' + (a.key || 'p' + pages[0])); } catch (e) {}
+  try { localStorage.setItem('adcc-anchor', JSON.stringify(a)); } catch (e) {}
+  if (pendingFlash) {
+    const el = book.querySelector('.slot ' + pendingFlash);
+    if (el) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+    pendingFlash = null;
+  }
+}
+$('#prev').addEventListener('click', () => step(-1));
+$('#next').addEventListener('click', () => step(1));
+$('#edgePrev').addEventListener('click', () => step(-1));
+$('#edgeNext').addEventListener('click', () => step(1));
+$('#toContents').addEventListener('click', () => goTo(P.contents));
+$('#toIndex').addEventListener('click', () => goTo(P.index));
+scrub.addEventListener('input', () => {
+  const v = +scrub.value;
+  setMeta([v]);
+  scrub.style.setProperty('--fill', (v / Math.max(1, N - 1) * 100).toFixed(2) + '%');
+});
+scrub.addEventListener('change', () => goTo(+scrub.value));
+
+/* go to a combination number: inline field on wide screens, a full-width field on phones */
+const goNo = $('#goNo'), findForm = $('#findForm'), findNo = $('#findNo');
+function submitNo(inp) {
+  const n = parseInt(inp.value, 10);
+  if (n >= 1 && n <= 348) { inp.value = ''; inp.blur(); gotoCombo(n); return true; }
+  inp.setAttribute('aria-invalid', 'true'); toast('Combinations are numbered 1 to 348.');
+  return false;
+}
+[goNo, findNo].forEach(inp => inp.addEventListener('input', () => { inp.value = inp.value.replace(/\D/g, ''); inp.removeAttribute('aria-invalid'); }));
+$('#goForm').addEventListener('submit', e => { e.preventDefault(); submitNo(goNo); });
+function openFind() { findForm.hidden = false; findNo.value = ''; findNo.removeAttribute('aria-invalid'); findNo.focus(); }
+function closeFind() { findForm.hidden = true; findNo.blur(); }
+$('#findOpen').addEventListener('click', openFind);
+$('#findClose').addEventListener('click', closeFind);
+findForm.addEventListener('submit', e => { e.preventDefault(); if (submitNo(findNo)) closeFind(); });
+findForm.addEventListener('focusout', e => { if (!findForm.contains(e.relatedTarget)) setTimeout(() => { if (!findForm.contains(document.activeElement)) closeFind(); }, 120); });
+[goNo, findNo].forEach(inp => inp.addEventListener('blur', () => setTimeout(() => layout(), 250)));
+
+document.addEventListener('keydown', e => {
+  if (!$('#sheet').hidden) { if (e.key === 'Escape') closeSheet(); return; }
+  if (e.target.closest('input,textarea,select')) { if (e.key === 'Escape') { e.target.blur(); if (!findForm.hidden) closeFind(); } return; }
+  if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); step(1); }
+  else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); step(-1); }
+  else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+  else if (e.key === 'End') { e.preventDefault(); goTo(N - 1); }
+  else if (e.key === '/' || e.key === 'g') { e.preventDefault(); if ($('#findOpen').offsetParent) openFind(); else goNo.focus(); }
+});
+
+/* ---------- copy & toast ---------- */
+let toastTimer;
+function toast(msg, long) {
+  const t = $('#toast');
+  t.hidden = true; void t.offsetWidth;
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => (t.hidden = true), long ? 7000 : 2000);
+}
+function copyText(text, btn) {
+  const done = () => {
+    toast('Copied ' + text);
+    const lab = btn && (btn.querySelector('.val__c') || (btn.classList.contains('copy') ? btn : null));
+    if (lab) { const o = lab.textContent; lab.textContent = 'Copied'; setTimeout(() => (lab.textContent = o), 1300); }
+  };
+  const fail = () => toast('Copying is blocked here. Select the values: ' + text, true);
+  try { navigator.clipboard.writeText(text).then(done, fail); } catch (e) { fail(); }
+}
+
+/* ---------- color sheet: a draggable sheet (bottom on phones, side on wide screens) ---------- */
+const sheet = $('#sheet'), card = $('#card'), scrim = $('#scrim');
+let sheetColor = 0, lastFocus = null, sh = {pos: 0, size: 1, axis: 'y', ctrl: null, open: false};
+function sheetApply() {
+  card.style.transform = sh.axis === 'y' ? `translateY(${sh.pos}px)` : `translateX(${sh.pos}px)`;
+  scrim.style.opacity = clamp(1 - sh.pos / sh.size, 0, 1).toFixed(3);
+}
+function sheetTo(target, velocity = 0, damping = 1, response = .38, done) {
+  if (sh.ctrl) sh.ctrl.stop();
+  if (reduced()) { sh.pos = target; sheetApply(); done && done(); return; }
+  sh.ctrl = spring({from: sh.pos, to: target, velocity, damping, response, eps: .4, onUpdate: x => { sh.pos = x; sheetApply(); }, onRest: done});
+}
+function openColor(i, opener) {
+  sheetColor = i; lastFocus = opener || null;
+  const c = C[i], fam = FAM[c.f];
+  $('#sheetSw').style.background = c.h;
+  $('#sheetEyebrow').textContent = `${fam.title} · ${i + 1} of ${C.length}`;
+  $('#sheetName').textContent = dname(i);
+  $('#sheetVals').innerHTML = [['CMYK', cmyk(c.k)], ['RGB', c.r.join(', ')], ['HEX', c.h.toUpperCase()]]
+    .map(([k, v]) => `<button type="button" class="val" data-copyval="${v}" aria-label="Copy ${k} ${v}"><span class="val__k">${k}</span><span class="val__v">${v}</span><span class="val__c">Copy</span></button>`).join('');
+  $('#sheetUsed').textContent = `In ${c.c.length} combination${c.c.length === 1 ? '' : 's'}`;
+  $('#sheetChips').innerHTML = c.c.map(n => {
+    const cs = COMBOS[n], others = cs.filter(j => j !== i);
+    return `<button type="button" class="crow" data-chip="${n}" aria-label="Open combination ${pad3(n)}: ${esc(cs.map(dname).join(', '))}">
+      <span class="crow__no">${pad3(n)}</span>
+      <span class="crow__body"><span class="crow__strip" aria-hidden="true">${cs.map(j => `<i style="background:${C[j].h}"${j === i ? ' class="me"' : ''}></i>`).join('')}</span>
+      <span class="crow__with">with ${esc(others.map(dname).join(' · '))}</span></span></button>`;
+  }).join('');
+  const bottom = innerWidth < 700;
+  sheet.classList.toggle('bottom', bottom); sheet.classList.toggle('side', !bottom);
+  sheet.hidden = false;
+  card.scrollTop = 0;
+  sh.axis = bottom ? 'y' : 'x';
+  sh.size = bottom ? card.offsetHeight : card.offsetWidth + 14;
+  if (!sh.open) { sh.pos = sh.size; sheetApply(); }
+  sh.open = true;
+  sheetTo(0, 0, 1, .36);
+  $('#sheetClose').focus({preventScroll: true});
+}
+function closeSheet(velocity = 0) {
+  if (!sh.open) return;
+  sh.open = false;
+  sheetTo(sh.size, velocity, 1, .32, () => { if (!sh.open) { sheet.hidden = true; if (lastFocus && document.contains(lastFocus)) lastFocus.focus({preventScroll: true}); } });
+}
+scrim.addEventListener('click', () => closeSheet());
+$('#sheetClose').addEventListener('click', () => closeSheet());
+sheet.addEventListener('click', e => {
+  const chip = e.target.closest('[data-chip]');
+  if (chip) { closeSheet(); gotoCombo(+chip.dataset.chip); return; }
+  const cv = e.target.closest('[data-copyval]');
+  if (cv) copyText(cv.dataset.copyval, cv);
+});
+$('#sheetIndex').addEventListener('click', () => { closeSheet(); gotoColor(sheetColor); });
+let sdrag = null;
+function sheetDown(e) {
+  if (e.button !== 0 || e.target.closest('#sheetClose')) return;
+  if (sh.ctrl) sh.ctrl.stop();                                  // grab it even while it is moving
+  sdrag = {id: e.pointerId, start: (sh.axis === 'y' ? e.clientY : e.clientX) - sh.pos, tr: tracker()};
+  e.currentTarget.setPointerCapture(e.pointerId);
+}
+function sheetMove(e) {
+  if (!sdrag || e.pointerId !== sdrag.id) return;
+  const at = sh.axis === 'y' ? e.clientY : e.clientX;
+  sdrag.tr.add(at, e.timeStamp);
+  const raw = at - sdrag.start;
+  sh.pos = raw < 0 ? -rubber(-raw, sh.size) : raw;
+  sheetApply();
+}
+function sheetUp(e) {
+  if (!sdrag || e.pointerId !== sdrag.id) return;
+  const v = sdrag.tr.velocity(); sdrag = null;
+  if (sh.pos + project(v) > sh.size * .45) closeSheet(v);
+  else sheetTo(0, v, .82, .3);
+}
+['grab', 'sheetTop'].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener('pointerdown', sheetDown);
+  el.addEventListener('pointermove', sheetMove);
+  el.addEventListener('pointerup', sheetUp);
+  el.addEventListener('pointercancel', sheetUp);
+});
+sheet.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const f = [...sheet.querySelectorAll('button')].filter(b => b.offsetParent !== null);
+  if (!f.length) return;
+  if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+  else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+});
+
+/* ---------- sizing & re-flow ---------- */
+// Measure real row heights on a hidden page of the current size, then decide page breaks.
+function measurePlan() {
+  const side = mode === 'spread' ? 'right' : 'single';
+  const m = document.createElement('div');
+  m.className = 'slot measure';
+  m.innerHTML = `<div class="page page--index ${side}"><div class="pb"><div class="ihead"><h2>Reds &amp; Red-Purples</h2><span>38 colors</span></div>${C.map((c, i) => irowHTML(i)).join('')}</div></div>`;
+  book.appendChild(m);
+  const pg = m.firstChild, pb = pg.querySelector('.pb'), cs = getComputedStyle(pb);
+  const gap = parseFloat(cs.rowGap) || 0, fs = parseFloat(getComputedStyle(pg).fontSize);
+  const avail = pb.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  const head = pg.querySelector('.ihead').getBoundingClientRect().height;
+  const rows = [...pb.querySelectorAll('.irow')].map(r => r.getBoundingClientRect().height);
+  m.remove();
+  const breaks = FAM.map(f => {
+    const out = []; let items = [], used = head;
+    for (let i = f.from; i <= f.to; i++) {
+      let add = (used > 0 ? gap : 0) + rows[i];
+      if (used + add > avail - 2 && items.length) { out.push(items); items = []; used = 0; add = rows[i]; }
+      items.push(i); used += add;
+    }
+    out.push(items);
+    return out;
+  });
+  const prose = {};
+  for (const key of Object.keys(PROSE)) {
+    const pm = document.createElement('div');
+    pm.className = 'slot measure';
+    pm.innerHTML = `<div class="page page--${key} ${side}"><div class="pb prose"></div></div>`;
+    book.appendChild(pm);
+    const box = pm.querySelector('.pb'), pages = [];
+    let group = [];
+    PROSE[key].blocks.forEach((b, bi) => {
+      box.innerHTML = [...group, bi].map(x => PROSE[key].blocks[x]).join('');
+      if (box.scrollHeight > box.clientHeight + 1 && group.length) { pages.push(group); group = [bi]; }
+      else group.push(bi);
+    });
+    pages.push(group);
+    pm.remove();
+    prose[key] = pages;
+  }
+  const tm = document.createElement('div');
+  tm.className = 'slot measure';
+  tm.innerHTML = `<div class="page page--contents ${side}"><div class="pb"><div class="toc"></div></div></div>`;
+  book.appendChild(tm);
+  const tbox = tm.querySelector('.pb'), tlist = tm.querySelector('.toc'), items = tocList(() => 888), toc = [];
+  let tg = [];
+  items.forEach((it, ii) => {
+    tlist.innerHTML = [...tg, ii].map(x => tocItem(...items[x])).join('');
+    if (tbox.scrollHeight > tbox.clientHeight + 1 && tg.length) { toc.push(tg); tg = [ii]; }
+    else tg.push(ii);
+  });
+  toc.push(tg);
+  tm.remove();
+  return {per: avail / fs >= 27 ? 2 : 1, breaks, prose, toc};
+}
+let lastKey = '', pendingAnchor = null;
+function layout(force) {
+  const ae = document.activeElement;
+  if (ae && ae.matches && ae.matches('#goNo,#findNo')) return;   // the on-screen keyboard resizes the page; wait until it closes
+  const W = stage.clientWidth, Hs = stage.clientHeight;
+  if (!W || !Hs) return;
+  let m, npw, nph, nfs;
+  const spreadW = Math.min(Hs * .93 * .68, (W - 12) / 2);
+  if (W >= Hs && spreadW >= 300) {
+    m = 'spread'; npw = Math.floor(spreadW); nph = Math.floor(npw / .68); nfs = npw / 28;
+  } else if (W >= Hs * 1.5 && (W - 12) / 2 >= 220) {          // short landscape screens: two wide pages
+    m = 'spread'; nph = Math.floor(Hs * .96); npw = Math.floor(Math.min((W - 12) / 2, nph));
+    nfs = clamp(Math.min(npw / 24, nph / 34), 12, 18);
+  } else {
+    m = 'single';
+    const H = Hs * .96;
+    nph = H; npw = Math.min(W, H * (W > Hs ? 1 : .75));
+    if (npw / nph < .52) nph = npw / .52;
+    npw = Math.floor(npw); nph = Math.floor(nph);
+    nfs = clamp(Math.min(npw / 24, nph / 34), 12, 18);
+  }
+  const key = `${m}|${npw}|${nph}|${nfs.toFixed(2)}`;
+  if (key === lastKey && !force) return;
+  lastKey = key;
+  settleTurn();
+  const anchor = pendingAnchor || (N ? anchorOf(visible()[0]) : null);
+  pendingAnchor = null;
+  mode = m; pw = npw;
+  book.style.setProperty('--pw', npw + 'px');
+  book.style.setProperty('--ph', nph + 'px');
+  book.style.setProperty('--fs', nfs.toFixed(3) + 'px');
+  book.classList.toggle('single', m === 'single');
+  const plan = measurePlan(), sig = JSON.stringify(plan);
+  if (sig !== planSig) { planSig = sig; buildPages(plan); scrub.max = N - 1; }
+  if (anchor) cur = clamp(anchor.page != null ? anchor.page : pageOf(anchor), 0, N - 1);
+  render();
+}
+
+/* ---------- start ---------- */
+(function start() {
+  const h = (location.hash || '').slice(1);
+  if (/^c\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= 348) { pendingAnchor = {combo: +h.slice(1)}; pendingFlash = `[data-n="${+h.slice(1)}"]`; }
+  else if (/^p\d+$/.test(h)) pendingAnchor = {page: +h.slice(1)};
+  else if (h === 'index') pendingAnchor = {key: 'idivider'};
+  else if (/^[a-z]+[IV]*$/.test(h)) pendingAnchor = {key: h};
+  else { try { const s = JSON.parse(localStorage.getItem('adcc-anchor') || 'null'); if (s && typeof s === 'object') pendingAnchor = s; } catch (e) {} }
+  if (!pendingAnchor) pendingAnchor = {key: 'cover'};
+  layout(true);
+  const dock = $('#dock');
+  const setDockH = () => document.documentElement.style.setProperty('--dock-h', dock.offsetHeight + 'px');
+  setDockH();
+  if ('ResizeObserver' in window) { new ResizeObserver(() => layout()).observe(stage); new ResizeObserver(setDockH).observe(dock); }
+  else window.addEventListener('resize', () => { layout(); setDockH(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => layout(true));
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

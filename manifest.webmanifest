@@ -1,0 +1,40 @@
+{
+  "name": "A Dictionary of Color Combinations",
+  "short_name": "Color Dictionary",
+  "description": "A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e8e7e3",
+  "theme_color": "#1c1c1f",
+  "categories": [
+    "books",
+    "design",
+    "reference"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
