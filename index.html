@@ -619,6 +619,7 @@ function pageEl(idx, side) {
 /* ---------- book state ---------- */
 const stage = $('#stage'), book = $('#book'), slotL = $('#slotL'), slotR = $('#slotR');
 let mode = '', cur = 0, pw = 400, turn = null, pendingFlash = null, suppressClick = false;
+let focus = null;                          // the page, combination or color the reader asked for; drives the label and the link
 let bookX = 0, nudge = 0, nudgeSpring = null;
 const spreadOf = p => Math.floor((p + 1) / 2);
 const spreadPages = s => [2 * s - 1, 2 * s];
@@ -713,7 +714,8 @@ function crossfade() {
   [slotL, slotR].forEach(sl => sl.firstChild && sl.firstChild.animate && sl.firstChild.animate([{opacity: .2}, {opacity: 1}], {duration: 220, easing: 'ease-out'}));
 }
 function settleTurn() { if (turn) { const t = turn; setTurn(t, t.target); finishTurn(t, t.target === 1); } }
-function step(dir) {
+function step(dir, keepFocus) {
+  if (!keepFocus) focus = null;
   if (turn) {
     if (turn.dir === dir && turn.target === 1) settleTurn();                       // tap again: finish this one, start the next
     else if (turn.dir === dir) { drive(turn, 1, turn.ctrl ? turn.ctrl.v : 0); return; }
@@ -734,19 +736,20 @@ function bump(dir) {                       // a soft knock against the cover whe
   if (nudgeSpring) nudgeSpring.stop();
   nudgeSpring = spring({from: nudge, to: 0, velocity: -dir * 260, damping: .7, response: .35, eps: .3, onUpdate: x => { nudge = x; applyBook(); }});
 }
-function goTo(p, flash) {
+function goTo(p, flash, extra) {
   p = clamp(p | 0, 0, N - 1);
   settleTurn();
   pendingFlash = flash || null;
+  focus = {page: p, ...(extra || {})};
   const same = mode === 'spread' ? spreadOf(p) === spreadOf(cur) : p === cur;
   if (same) { cur = mode === 'spread' ? firstOf(spreadOf(p)) : p; afterMove(); return; }
   const gap = mode === 'spread' ? spreadOf(p) - spreadOf(cur) : p - cur;
-  if (Math.abs(gap) === 1 && !reduced()) { step(gap); return; }
+  if (Math.abs(gap) === 1 && !reduced()) { step(gap, true); return; }
   cur = mode === 'spread' ? firstOf(spreadOf(p)) : p;
   render(); crossfade();
 }
-const gotoCombo = n => { if (comboPage[n] != null) goTo(comboPage[n], `[data-n="${n}"]`); };
-const gotoColor = i => goTo(colorPage[i], `[data-row="${i}"]`);
+const gotoCombo = n => { if (comboPage[n] != null) goTo(comboPage[n], `[data-n="${n}"]`, {combo: n}); };
+const gotoColor = i => goTo(colorPage[i], `[data-row="${i}"]`, {color: i});
 
 /* ---------- direct manipulation: drag a page, grab one mid-turn, rubber-band at the ends ---------- */
 let drag = null;
@@ -768,7 +771,7 @@ stage.addEventListener('pointermove', e => {
   if (!drag.active) {
     if (Math.abs(dx) < 10) { if (Math.abs(dy) > 14) drag = null; return; }
     if (Math.abs(dx) < Math.abs(dy)) { drag = null; return; }
-    drag.active = true; drag.moved = true; drag.x0 = e.clientX;
+    drag.active = true; drag.moved = true; drag.x0 = e.clientX; focus = null;
     try { stage.setPointerCapture(e.pointerId); } catch (_) {}
     const dir = dx < 0 ? 1 : -1;
     if (!reduced()) { settleTurn(); const tn = beginTurn(dir); if (tn) { turn = tn; drag.tn = tn; } }
@@ -829,21 +832,23 @@ function describe(pages) {
   if (t.t === 'divider') return t.part.title;
   return NAMES[t.t] || '';
 }
-function setMeta(pages) {
+function setMeta(pages, fp) {
   $('#where').textContent = (pages.length > 1 ? `${pages[0]}–${pages[1]}` : `${pages[0]}`) + ` / ${N - 1}`;
-  $('#section').textContent = describe(pages);
+  $('#section').textContent = describe(fp != null ? [fp] : pages);
 }
 function afterMove() {
   const pages = visible();
-  setMeta(pages);
+  if (focus && !pages.includes(focus.page)) focus = null;
+  setMeta(pages, focus ? focus.page : null);
   scrub.value = pages[0];
   scrub.style.setProperty('--fill', (pages[0] / Math.max(1, N - 1) * 100).toFixed(2) + '%');
   const atStart = mode === 'spread' ? spreadOf(cur) === 0 : cur === 0;
   const atEnd = mode === 'spread' ? spreadOf(cur) === lastSpread() : cur === N - 1;
   $('#prev').disabled = atStart; $('#next').disabled = atEnd;
   $('#edgePrev').hidden = atStart; $('#edgeNext').hidden = atEnd;
-  const a = anchorOf(pages[0]);
-  try { history.replaceState(null, '', a.combo ? '#c' + pad3(a.combo) : '#' + (a.key || 'p' + pages[0])); } catch (e) {}
+  const a = focus && focus.combo ? {combo: focus.combo} : focus && focus.color != null ? {color: focus.color} : anchorOf(focus ? focus.page : pages[0]);
+  const hash = a.combo ? 'c' + pad3(a.combo) : a.color != null ? 'k' + (a.color + 1) : (a.key || 'p' + pages[0]);
+  try { history.replaceState(null, '', '#' + hash); } catch (e) {}
   try { localStorage.setItem('adcc-anchor', JSON.stringify(a)); } catch (e) {}
   if (pendingFlash) {
     const el = book.querySelector('.slot ' + pendingFlash);
@@ -1080,7 +1085,8 @@ function layout(force) {
   if (key === lastKey && !force) return;
   lastKey = key;
   settleTurn();
-  const anchor = pendingAnchor || (N ? anchorOf(visible()[0]) : null);
+  const anchor = pendingAnchor || (focus && focus.combo ? {combo: focus.combo} : focus && focus.color != null ? {color: focus.color} : (N ? anchorOf(visible()[0]) : null));
+  const keep = pendingAnchor ? (pendingAnchor.combo || pendingAnchor.color != null ? pendingAnchor : null) : focus;
   pendingAnchor = null;
   mode = m; pw = npw;
   book.style.setProperty('--pw', npw + 'px');
@@ -1090,6 +1096,7 @@ function layout(force) {
   const plan = measurePlan(), sig = JSON.stringify(plan);
   if (sig !== planSig) { planSig = sig; buildPages(plan); scrub.max = N - 1; }
   if (anchor) cur = clamp(anchor.page != null ? anchor.page : pageOf(anchor), 0, N - 1);
+  focus = keep && (keep.combo || keep.color != null) ? {page: pageOf(keep), combo: keep.combo, color: keep.color} : null;
   render();
 }
 
@@ -1097,6 +1104,7 @@ function layout(force) {
 (function start() {
   const h = (location.hash || '').slice(1);
   if (/^c\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= 348) { pendingAnchor = {combo: +h.slice(1)}; pendingFlash = `[data-n="${+h.slice(1)}"]`; }
+  else if (/^k\d+$/.test(h) && +h.slice(1) >= 1 && +h.slice(1) <= C.length) { pendingAnchor = {color: +h.slice(1) - 1}; pendingFlash = `[data-row="${+h.slice(1) - 1}"]`; }
   else if (/^p\d+$/.test(h)) pendingAnchor = {page: +h.slice(1)};
   else if (h === 'index') pendingAnchor = {key: 'idivider'};
   else if (/^[a-z]+[IV]*$/.test(h)) pendingAnchor = {key: h};
