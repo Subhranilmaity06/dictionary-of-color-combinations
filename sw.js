@@ -1,4 +1,4 @@
-// Offline reading: the page is fetched fresh when online and served from cache when not.
+// Offline reading: the page is revalidated with the server when online and served from cache when not.
 const CACHE = 'adcc-c357043771';
 const CORE = ["./", "index.html", "manifest.webmanifest", "icon.svg", "icon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "fonts/shippori-mincho-400.woff2", "fonts/shippori-mincho-500.woff2", "fonts/zen-kaku-gothic-new-400.woff2", "fonts/zen-kaku-gothic-new-500.woff2", "fonts/ibm-plex-mono-400.woff2"];
 self.addEventListener('install', e => {
@@ -13,7 +13,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   if (req.mode === 'navigate') {
-    e.respondWith(fetch(req)
+    e.respondWith(fetch(req, {cache: 'no-cache'})
       .then(res => { const copy = res.clone(); caches.open(CACHE).then(c => c.put('index.html', copy)); return res; })
       .catch(() => caches.match('index.html')));
     return;
